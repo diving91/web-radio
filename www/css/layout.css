@@ -1,0 +1,44 @@
+/* using material icons http://google.github.io/material-design-icons/*/
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+body {
+	background: black;
+	color: #8bc34a; /* green */
+}
+
+/* Bootstrap Buttons override */
+.my-primary, .my-primary:focus, .my-primary:hover{
+  color: #8bc34a ;
+  background-color: #001f00; /*#343a40;*/
+  outline: none !important;
+  box-shadow: none !important;
+  margin:2px;
+}
+
+/* Days in modal cron add */
+.my-secondary, .my-secondary:focus, .my-secondary:hover {
+  color: white ;
+  background-color: #8bc34a;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Modal header primary */
+.mhp {
+  color: white ;
+  background-color: #8bc34a;
+}
+
+/* Control blocks */
+.control {
+  background-color: DarkSeaGreen;
+  padding:2px;
+  margin:10px;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: #8bc34a ;	
+}

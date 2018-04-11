@@ -1,0 +1,7 @@
+1 http://stream.chantefrance.com/stream_chante_france.mp3 #Chante France
+0 http://cdn.nrjaudio.fm/audio1/fr/30001/mp3_128.mp3?origine=fluxradios #NRJ
+0 http://cdn.nrjaudio.fm/audio1/fr/30601/mp3_128.mp3?origine=fluxradios #Nostalgie
+0 http://cdn.nrjaudio.fm/audio1/fr/30201/mp3_128.mp3?origine=fluxradios #Cherie FM
+0 http://roo8ohho.cdn.dvmr.fr/live/franceinfo-midfi.mp3?ID=f9fbk29m84 #France Info
+0 http://icepe2.infomaniak.ch/impactfm-128.mp3 #Impact FM
+0 http://radioclassique.ice.infomaniak.ch/radioclassique-high.mp3 #Radio Classique
