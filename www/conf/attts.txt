@@ -1,0 +1,1 @@
+/usr/bin/curl localhost/jeedom >/dev/null 2>&1
