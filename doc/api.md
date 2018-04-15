@@ -102,7 +102,7 @@
 |Method|GET |
 |URL params|none|
 |Success|{"Status":"OK"}|
-|Error|{"Status":"TTS: #Error date from VoiceRSS#"}|
+|Error|{"Status":"TTS: #Error info from VoiceRSS#"}|
 |Example|/tts/Hello%20World!|
 |Note| TTS engine is server side configured|
 ||picoTTS does not required web service, it runs locally|
@@ -116,7 +116,7 @@
 |**URL**|**/weather**|
 |Method|GET |
 |URL params|none|
-|Success|"Status":"OK"|
+|Success|{"Status":"OK"}|
 |Error|{"Status":"TTS: #Error date from VoiceRSS#"}|
 |Note|Use a web service from https://www.prevision-meteo.ch|
 ||Actual temperature, min/max temperature for today|
@@ -129,9 +129,9 @@
 |**URL**|**/jeedom**|
 |Method|GET |
 |URL params|none|
-|Success|"Status":"OK"|
+|Success|{"Status":"OK"}|
 |Error|{"Status":"TTS: #Error date from VoiceRSS#"}|
-|Note|Uses Interaction system from http://jeedom.fr|
+|Note|Uses Interaction system of http://jeedom.fr|
 ||calls jeedom API with a server side predefined query and play back result using TTS|
 ||This can be used with a non recurring alarm clock trigger|
 ||Typical use case: Jeedom query (**/nextcron**) the next wake up time every day at 00:00 and set (**/addat**) a non recurring wake-up time at  Web Radio wake up time +xx minutes to render interaction result|
@@ -157,7 +157,7 @@ sequenceDiagram
 |--|--|
 |**URL**|**/getcron**|
 |Success|{"Status":"OK","cron":[{"raw":"30 06 * * 1,2,3,4,5","active":true,"mm":"30","hh":"06","dd":"1,2,3,4,5","name":"Semaine"},{"raw":"50 07 * * 6","active":true,"mm":"50","hh":"07","dd":"6","name":"Samedi 1"},{"raw":"#50 08 * * 6","active":false,"mm":"50","hh":"08","dd":"6","name":"Samedi 2"},{"raw":"50 08 * * 0","active":true,"mm":"50","hh":"08","dd":"0","name":"Dimanche"},{"raw":"#50 4 * * 5","active":false,"mm":"50","hh":"4","dd":"5","name":"Venlo"}]}|
-
+|Error|{"Status":"KO"}|
 ##
 
 |Description|Add a recurring alarm clock event|
