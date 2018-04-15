@@ -1,9 +1,15 @@
----
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>api</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
 
----
-
-<h1 id="home-automation-audio-satellite-api-documentation">Home automation Audio Satellite API Documentation</h1>
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="home-automation-audio-satellite-api-documentation">Home automation Audio Satellite API Documentation</h1>
 <p>'/'<br>
 GET</p>
 <h1 id="titre-de-niveau-1">Titre de niveau 1</h1>
@@ -36,4 +42,7 @@ GET /delat/@id:[1-9][0-9]*</p>
 GET /selstation/@id:[0-9][0-9]*<br>
 POST /upload<br>
 GET /download</p>
+</div>
+</body>
 
+</html>
