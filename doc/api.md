@@ -58,14 +58,15 @@
 </tr>
 <tr>
 <td>Error</td>
-<td>none</td>
+<td>{“Status”:“KO”,“Volume”:“Out of Range”}</td>
 </tr>
 <tr>
 <td>Note</td>
 <td>Volume is set permanent even after a shutdown</td>
 </tr>
 </tbody>
-</table>
+</table><h2 id="section"></h2>
+
 <table>
 <thead>
 <tr>
@@ -95,9 +96,7 @@
 <td>none</td>
 </tr>
 </tbody>
-</table><h2 id="titre-de-niveau-2">Titre de niveau 2</h2>
-<p>GET /setvol/@id:[1-9][0-9]?|100</p>
-<h1 id="titre-de-niveau-1">Titre de niveau 1</h1>
+</table><h1 id="titre-de-niveau-1">Titre de niveau 1</h1>
 <p>GET /radion<br>
 GET /radioff<br>
 GET /snooze<br>
