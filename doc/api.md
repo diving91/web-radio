@@ -161,7 +161,7 @@ sequenceDiagram
 |Success|{"Status":"OK","cron":[{"raw":"30 06 * * 1,2,3,4,5","active":true,"mm":"30","hh":"06","dd":"1,2,3,4,5","name":"Semaine"},{"raw":"50 07 * * 6","active":true,"mm":"50","hh":"07","dd":"6","name":"Samedi 1"},{"raw":"#50 08 * * 6","active":false,"mm":"50","hh":"08","dd":"6","name":"Samedi 2"},{"raw":"50 08 * * 0","active":true,"mm":"50","hh":"08","dd":"0","name":"Dimanche"},{"raw":"#50 4 * * 5","active":false,"mm":"50","hh":"4","dd":"5","name":"Venlo"}]}|
 |Error|{"Status":"KO"}|
 |Note|The returned Json uses cron notation to describe alarm clock events|
-||"mm hh * * dow" (dow=day of week: 0..7 winth Sunday =0)|
+||"mm hh * * dow" (dow=day of week: 0..7 with Sunday =0)|
 ||"active": true\|false tells if the alarm clock event is activated or not|
 ||More than one alarm clock event can be activate at a time|
 ##
@@ -170,13 +170,14 @@ sequenceDiagram
 |--|--|
 |**URL**|**/addcron**|
 |Method|GET |
-|URL params|cron=json to describe the alarm clock event|
+|URL params|?cron=json to describe the alarm clock event|
 |Success|TODO|
 |Error|none|
-|Example|[http://myip/addcron?cron={"t":"23:10","d":\[true,true,true,true,false,true,true\],"c":"Thursdays"}](http://myip/addcron?cron={"t":"23:10","d":\[true,true,true,true,false,true,true\],"c":"Thursdays"})
-|
-|Note|When added, the alarm clock event is activated. You can use /stacron to desactivate|
-|||
+|Example|[http://myip/addcron?cron={"t":"23:10","d":\[true,true,true,true,false,true,true\],"c":"Thursdays"}](http://myip/addcron?cron={"t":"23:10","d":\[true,true,true,true,false,true,true\],"c":"Thursdays"})|
+|Note|When added, the alarm clock event is activated. You can use **/stacron** to desactivate|
+||t: is the time format hh:mm|
+||d: is an array to specif on which days the alarm clock will run. The array starts on [sunday, monday,..., saturday]|
+||c: is a nickname for the alarm clock event|
 
 ##
 
@@ -185,7 +186,10 @@ sequenceDiagram
 |**URL**|**/delcron/@id**|
 |Method|GET |
 |URL params|none|
+|Success|TODO|
+|Error|TODO|
 |Example|/delcron/1|
+|Note|@id is the event id to delete and starts at 0 in the **/getcron** list|
 
 ##
 
@@ -194,8 +198,12 @@ sequenceDiagram
 |**URL**|**/stacron/@id/@state**|
 |Method|GET |
 |URL params|none|
+|Success|TODO|
+|Error|TODO|
 |Example|/stacron/1/on|
 ||/stacron/2/off|
+|Note|@id is the event id to activate/desactive and starts at 0 in the **/getcron** list|
+|Note|@state = on\|off|
 
 ##
 
@@ -204,13 +212,9 @@ sequenceDiagram
 |**URL**|**/nextcron**|
 |Method|GET |
 |URL params|none|
-
-GET /getcron
-GET /addcron
-GET /delcron/@id:[0-9][0-9]*
-GET /stacron/@id:[0-9][0-9]*/@state:on|off
-GET /nextcron
-
+|Success|TODO|
+|Error|TODO|
+|Note||
 
 ## Manage alarm clock scheduler (non recurring)
 GET /getat
