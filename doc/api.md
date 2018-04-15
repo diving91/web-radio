@@ -96,6 +96,42 @@
 
 ## Manage Text-to-speech (TTS)
 
+|Description|Play a Text-to-Speed voice (VoiceRSS or picoTTS)|
+|--|--|
+|**URL**|**/tts/@say**|
+|Method|GET |
+|URL params|none|
+|Success|{"Status":"OK"}|
+|Error|{"Status":"TTS: #Error date from VoiceRSS#"}|
+|Example|/tts/Hello%20World!|
+|Note| TTS engine is server side configured|
+||picoTTS does not required web service, it runs locally|
+||TTS play volume is server side configured|
+||If a Web Radio was running, it is stopped for TTS, then restarted automatically|
+
+##
+
+|Description|Play a preconfigured weather information|
+|--|--|
+|**URL**|**/weather**|
+|Method|GET |
+|URL params|none|
+|Success|"Status":"OK"|
+|Error|{"Status":"TTS: #Error date from VoiceRSS#"}|
+|Note|Use a web service from https://www.prevision-meteo.ch|
+||Actual temperature, min/max temperature for today|
+|| Actual weather condition, Today weather condition|
+##
+
+|Description|Play an interaction result from Jeedom Home automation system|
+|--|--|
+|**URL**|**/jeedom**|
+|Method|GET |
+|URL params|none|
+|Success|"Status":"OK"|
+|Error|{"Status":"TTS: #Error date from VoiceRSS#"}|
+|Note|Uses Interaction system from http://jeedom.fr|
+
 GET /tts/@say
 GET /weather
 GET /jeedom
