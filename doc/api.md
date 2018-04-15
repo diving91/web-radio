@@ -21,6 +21,14 @@
 <td>URL params:</td>
 <td>None</td>
 </tr>
+<tr>
+<td>Success</td>
+<td>Render hosted apps</td>
+</tr>
+<tr>
+<td>Error</td>
+<td>none</td>
+</tr>
 </tbody>
 </table><h1 id="manage-global-volume">Manage Global volume</h1>
 
@@ -42,7 +50,15 @@
 </tr>
 <tr>
 <td>URL params</td>
-<td>None</td>
+<td>none</td>
+</tr>
+<tr>
+<td>Success</td>
+<td>{“Status”:“OK”,“Volume”:“24”}</td>
+</tr>
+<tr>
+<td>Error</td>
+<td>none</td>
 </tr>
 </tbody>
 </table><h2 id="titre-de-niveau-2">Titre de niveau 2</h2>
