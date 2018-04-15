@@ -23,13 +23,12 @@
 </tr>
 </tbody>
 </table><h1 id="manage-global-volume">Manage Global volume</h1>
-<h2 id="get-current-audio-volume">Get current audio volume</h2>
 
 <table>
 <thead>
 <tr>
+<th>Description:</th>
 <th>Get current audio volume</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
