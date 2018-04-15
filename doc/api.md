@@ -198,7 +198,7 @@ sequenceDiagram
 |Example|[http://myip/addcron?cron={"t":"23:10","d":\[true,true,true,true,false,true,true\],"c":"Thursdays"}](http://myip/addcron?cron={"t":"23:10","d":\[true,true,true,true,false,true,true\],"c":"Thursdays"})|
 |Note|When added, the alarm clock event is activated. You can use **/stacron** to desactivate|
 ||t: is the time format hh:mm|
-||d: is an array to specif on which days the alarm clock will run. The array starts on [sunday, monday,..., saturday]|
+||d: is an array to specify on which days the alarm clock will run. The array starts on [sunday, monday,..., saturday]|
 ||c: is a nickname for the alarm clock event|
 
 ##
