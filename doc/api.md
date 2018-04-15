@@ -1,6 +1,5 @@
 # Home automation Audio Satellite API Documentation
 
-Table of Content
 - [Manage global volume](https://github.com/diving91/web-radio/blob/master/doc/api.md#manage-global-volume)
 - [Manage Web Radio](https://github.com/diving91/web-radio/blob/master/doc/api.md#manage-web-radio)
 - [Manage Text-to-speech (TTS)](https://github.com/diving91/web-radio/blob/master/doc/api.md#manage-text-to-speech-tts)
