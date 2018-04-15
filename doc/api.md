@@ -134,6 +134,18 @@
 <td>Error</td>
 <td>none</td>
 </tr>
+<tr>
+<td>Note</td>
+<td>Stream Selected Radio in the Playlist<code>&lt;br&gt;</code>if no playlist, stream default Radio</td>
+</tr>
+<tr>
+<td></td>
+<td>if no playlist, stream default Radio</td>
+</tr>
+<tr>
+<td></td>
+<td>if stream is not reachable, play a local file</td>
+</tr>
 </tbody>
 </table><p>GET /radion</p>
 <h2 id="section-1"></h2>
