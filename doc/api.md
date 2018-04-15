@@ -1,7 +1,7 @@
 # Home automation Audio Satellite API Documentation
 
 
-[Manage Global Volume](https://github.com/diving91/web-radio/blob/master/doc/api.md#manage-global-volume)
+[Manage global volume](https://github.com/diving91/web-radio/blob/master/doc/api.md#manage-global-volume)
 [Manage Web Radio](https://github.com/diving91/web-radio/blob/master/doc/api.md#manage-web-radio)
 [Manage Text-to-speech (TTS)](https://github.com/diving91/web-radio/blob/master/doc/api.md#manage-text-to-speech-tts)
 [Manage alarm clock scheduler (recurring)](https://github.com/diving91/web-radio/blob/master/doc/api.md#manage-alarm-clock-scheduler-recurring)
@@ -14,10 +14,10 @@
 |**URL**|**/**|
 |Method|GET |
 |URL params|None|
-|Success|Render hosted apps|
+|Success|Render server hosted application|
 |Error|none|
 
-# Manage Global volume
+# Manage global volume
 |Description|Set current audio volume (1-100)|
 |--|--|
 |**URL**|**/setvol/@id**|
@@ -25,7 +25,7 @@
 |URL params|none|
 |Success|{"Status":"OK","Volume":"24"}|
 |Error|{"Status":"KO","Volume":"Out of Range"}|
-|Note|Volume is set permanent even after a shutdown|
+|Note|Volume is set permanent even after a shutdown/reboot|
 |Example|/setvol/50|
 
 ## 
@@ -48,9 +48,9 @@
 |Success|{"Status":"OK","Radio":"Running","path":"http:\/\/stream_url.mp3"}|
 ||{"Status":"OK","Radio":"Was already Running"}|
 |Error|none|
-|Note|Stream Selected Radio in the Playlist|
-||if no playlist, stream default Radio|
-||if radio stream is not reachable, plays a local file|
+|Note|Stream the Selected Radio in Playlist|
+||If no playlist, stream default Radio (server side configured)|
+||If radio stream is not reachable, plays a local file (server side configured)|
 
 ##
 
@@ -61,7 +61,7 @@
 |URL params|none|
 |Success|{"Status":"OK","Radio":"Stopped"}|
 |Error|none|
-|Note|It also turns off running TTS streams|
+|Note|It also turns off running TTS stream|
 
 ##
 |Description|Snooze Web Radio|
@@ -74,9 +74,26 @@
 |Note|Snooze time is server side configured|
 
 ##
-GET /radiostate
+
+|Description|Return Web Radio status|
+|--|--|
+|**URL**|**/radiostate**|
+|Method|GET |
+|URL params|none|
+|Success|{"Status":"OK","Radio":"Running"}|
+||{"Status":"OK","Radio":"Stopped"}|
+|Error|none|
+
 ##
-GET /radiotoggle
+|Description|Toggle Web Radio ON/OFF|
+|--|--|
+|**URL**|**/radiotoggle**|
+|Method|GET |
+|URL params|none|
+|Success|{"Status":"OK","Radio":"Running"}|
+||{"Status":"OK","Radio":"Stopped"}|
+|Error|none|
+
 
 ## Manage Text-to-speech (TTS)
 
