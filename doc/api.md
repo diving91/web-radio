@@ -123,7 +123,7 @@
 || Actual weather condition, Today weather condition|
 ##
 
-|Description|Play an interaction result from Jeedom Home automation system|
+|Description|Play an interaction result from Jeedom home automation system|
 |--|--|
 |**URL**|**/jeedom**|
 |Method|GET |
@@ -131,10 +131,11 @@
 |Success|"Status":"OK"|
 |Error|{"Status":"TTS: #Error date from VoiceRSS#"}|
 |Note|Uses Interaction system from http://jeedom.fr|
+||calls jeedom API with a server side predefined query and play back result using TTS|
+||This can be used with a non recurring alarm clock trigger|
+||Typical use case: Jeedom query (**/nextcron**) the next wake up time every day at 00:00 and set (**/addat**) a non recurring wake-up time at  Web Radio wake up time +xx minutes to render interaction result|
 
-GET /tts/@say
-GET /weather
-GET /jeedom
+
 
 ## Manage alarm clock scheduler (recurring)
 
