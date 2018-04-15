@@ -134,8 +134,21 @@
 ||calls jeedom API with a server side predefined query and play back result using TTS|
 ||This can be used with a non recurring alarm clock trigger|
 ||Typical use case: Jeedom query (**/nextcron**) the next wake up time every day at 00:00 and set (**/addat**) a non recurring wake-up time at  Web Radio wake up time +xx minutes to render interaction result|
+<br>
+<br>
 
-
+```mermaid
+sequenceDiagram
+Jeedom ->> Audio Satellite: at 00:00 : next cron?
+Audio Satellite-->>Jeedom: 20:00 2018-04-11
+Jeedom->> Audio Satellite: /addat?at= 20:03 2018-04-11 TTS
+Audio Satellite->> Audio Satellite: Wait
+Note right of Audio Satellite: Wake-up time at 20:00 (Start Web Radio)
+Audio Satellite->>Jeedom: at 20:03 2018-04-11 : Jeedom interaction query
+Jeedom-->> Audio Satellite: Interaction result
+Note right of Audio Satellite: TTS at 20:03
+Note right of Audio Satellite: Web Radio restart
+```
 
 ## Manage alarm clock scheduler (recurring)
 
@@ -150,6 +163,9 @@ GET /nextcron
 GET /getat
 GET /addat
 GET /delat/@id:[1-9][0-9]*
+
+addat?at={%22d%22:1523823600,%22t%22:%22tts%22}
+addat?at={"d":1523823600,"t":"tts"}
 
 ## Manage Web Radio Playlist 
 GET /getstation
