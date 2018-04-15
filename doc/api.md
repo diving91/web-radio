@@ -28,7 +28,7 @@
 <table>
 <thead>
 <tr>
-<th></th>
+<th>Get current audio volume</th>
 <th></th>
 </tr>
 </thead>
