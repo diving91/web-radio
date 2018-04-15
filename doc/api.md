@@ -153,6 +153,37 @@ sequenceDiagram
 ```
 
 ## Manage alarm clock scheduler (recurring)
+|Description|Return the list of alarm clock events|
+|--|--|
+|**URL**|**/getcron**|
+|Success|{"Status":"OK","cron":[{"raw":"30 06 * * 1,2,3,4,5","active":true,"mm":"30","hh":"06","dd":"1,2,3,4,5","name":"Semaine"},{"raw":"50 07 * * 6","active":true,"mm":"50","hh":"07","dd":"6","name":"Samedi 1"},{"raw":"#50 08 * * 6","active":false,"mm":"50","hh":"08","dd":"6","name":"Samedi 2"},{"raw":"50 08 * * 0","active":true,"mm":"50","hh":"08","dd":"0","name":"Dimanche"},{"raw":"#50 4 * * 5","active":false,"mm":"50","hh":"4","dd":"5","name":"Venlo"}]}|
+
+##
+
+|Description|Add a recurring alarm clock event|
+|--|--|
+|**URL**|**/addcron**|
+
+##
+
+|Description|Delete a recurring alarm clock event|
+|--|--|
+|**URL**|**/delcron/@id**|
+|Example|/delcron/1|
+
+##
+
+|Description|Activate / Desactive a recurring alarm clock event|
+|--|--|
+|**URL**|**/stacron/@id/@state**|
+|Example|/stacron/1/on|
+||/stacron/2/off|
+
+##
+
+|Description|Return the next alarm clock time and date|
+|--|--|
+|**URL**|**/nextcron**|
 
 GET /getcron
 GET /addcron
