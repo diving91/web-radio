@@ -139,15 +139,15 @@
 
 ```mermaid
 sequenceDiagram
-Jeedom ->> Audio Satellite: at 00:00 : next cron?
-Audio Satellite-->>Jeedom: 20:00 2018-04-11
-Jeedom->> Audio Satellite: /addat?at= 20:03 2018-04-11 TTS
-Audio Satellite->> Audio Satellite: Wait
-Note right of Audio Satellite: Wake-up time at 20:00 (Start Web Radio)
-Audio Satellite->>Jeedom: at 20:03 2018-04-11 : Jeedom interaction query
-Jeedom-->> Audio Satellite: Interaction result
-Note right of Audio Satellite: TTS at 20:03
-Note right of Audio Satellite: Web Radio restart
+	Jeedom ->> Audio Satellite: at 00:00 : next cron?
+	Audio Satellite-->>Jeedom: 20:00 2018-04-11
+	Jeedom->> Audio Satellite: /addat?at= 20:03 2018-04-11 TTS
+	Audio Satellite->> Audio Satellite: Wait
+	Note right of Audio Satellite: Wake-up time at 20:00 (Start Web Radio)
+	Audio Satellite->>Jeedom: at 20:03 2018-04-11 : Jeedom interaction query
+	Jeedom-->> Audio Satellite: Interaction result
+	Note right of Audio Satellite: TTS at 20:03
+	Note right of Audio Satellite: Web Radio restart
 ```
 
 ## Manage alarm clock scheduler (recurring)
