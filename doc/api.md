@@ -171,10 +171,12 @@ sequenceDiagram
 |**URL**|**/addcron**|
 |Method|GET |
 |URL params|cron=json to describe the alarm clock event|
-|Success||
-|Error||
+|Success|TODO|
+|Error|none|
 |Example|[http://myip/addcron?cron={"t":"23:10","d":\[true,true,true,true,false,true,true\],"c":"Thursdays"}](http://myip/addcron?cron={"t":"23:10","d":\[true,true,true,true,false,true,true\],"c":"Thursdays"})
 |
+|Note|When added, the alarm clock event is activated. You can use /stacron to desactivate|
+|||
 
 ##
 
