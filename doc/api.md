@@ -10,15 +10,15 @@
 </thead>
 <tbody>
 <tr>
-<td>URL:</td>
+<td><strong>URL</strong></td>
 <td><strong>/</strong></td>
 </tr>
 <tr>
-<td>Methods:</td>
+<td>Method</td>
 <td>GET</td>
 </tr>
 <tr>
-<td>URL params:</td>
+<td>URL params</td>
 <td>None</td>
 </tr>
 <tr>
@@ -41,8 +41,8 @@
 </thead>
 <tbody>
 <tr>
-<td>URL</td>
-<td>/setvol/@id</td>
+<td><strong>URL</strong></td>
+<td><strong>/setvol/@id</strong></td>
 </tr>
 <tr>
 <td>Method</td>
@@ -80,8 +80,8 @@
 </thead>
 <tbody>
 <tr>
-<td>URL</td>
-<td>/getvol</td>
+<td><strong>URL</strong></td>
+<td><strong>/getvol</strong></td>
 </tr>
 <tr>
 <td>Method</td>
@@ -111,8 +111,8 @@
 </thead>
 <tbody>
 <tr>
-<td>URL</td>
-<td>/radion</td>
+<td><strong>URL</strong></td>
+<td><strong>/radion</strong></td>
 </tr>
 <tr>
 <td>Method</td>
@@ -158,8 +158,8 @@
 </thead>
 <tbody>
 <tr>
-<td>URL</td>
-<td>/radioff</td>
+<td><strong>URL</strong></td>
+<td><strong>/radioff</strong></td>
 </tr>
 <tr>
 <td>Method</td>
@@ -183,8 +183,41 @@
 </tr>
 </tbody>
 </table><h2 id="section-2"></h2>
-<p>GET /snooze</p>
-<h2 id="section-3"></h2>
+
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Snooze Web Radio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>URL</strong></td>
+<td><strong>/snooze</strong></td>
+</tr>
+<tr>
+<td>Method</td>
+<td>GET</td>
+</tr>
+<tr>
+<td>URL params</td>
+<td>none</td>
+</tr>
+<tr>
+<td>Success</td>
+<td>{“Status”:“OK”,“Snooze at”:“HH:MM YYYY-MM-DD”}</td>
+</tr>
+<tr>
+<td>Error</td>
+<td>{“Status”:“KO”,“Snooze at”:“Radio was not running”}</td>
+</tr>
+<tr>
+<td>Note</td>
+<td>Snooze time is server side configured</td>
+</tr>
+</tbody>
+</table><h2 id="section-3"></h2>
 <p>GET /radiostate</p>
 <h2 id="section-4"></h2>
 <p>GET /radiotoggle</p>
