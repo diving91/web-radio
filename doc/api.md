@@ -156,19 +156,33 @@ sequenceDiagram
 |Description|Return the list of alarm clock events|
 |--|--|
 |**URL**|**/getcron**|
+|Method|GET |
+|URL params|none|
 |Success|{"Status":"OK","cron":[{"raw":"30 06 * * 1,2,3,4,5","active":true,"mm":"30","hh":"06","dd":"1,2,3,4,5","name":"Semaine"},{"raw":"50 07 * * 6","active":true,"mm":"50","hh":"07","dd":"6","name":"Samedi 1"},{"raw":"#50 08 * * 6","active":false,"mm":"50","hh":"08","dd":"6","name":"Samedi 2"},{"raw":"50 08 * * 0","active":true,"mm":"50","hh":"08","dd":"0","name":"Dimanche"},{"raw":"#50 4 * * 5","active":false,"mm":"50","hh":"4","dd":"5","name":"Venlo"}]}|
 |Error|{"Status":"KO"}|
+|Note|The returned Json uses cron notation to describe alarm clock events|
+||"mm hh * * dow" (dow=day of week: 0..7 winth Sunday =0)|
+||"active": true\|false tells if the alarm clock event is activated or not|
+||More than one alarm clock event can be activate at a time|
 ##
 
 |Description|Add a recurring alarm clock event|
 |--|--|
 |**URL**|**/addcron**|
+|Method|GET |
+|URL params|cron=json to describe the alarm clock event|
+|Success||
+|Error||
+|Example|[http://myip/addcron?cron={"t":"23:10","d":[true,true,true,true,false,true,true],"c":"test event"}](http://myip/addcron?cron={"t":"23:10","d":[true,true,true,true,false,true,true],"c":"test event"})
+|
 
 ##
 
 |Description|Delete a recurring alarm clock event|
 |--|--|
 |**URL**|**/delcron/@id**|
+|Method|GET |
+|URL params|none|
 |Example|/delcron/1|
 
 ##
@@ -176,6 +190,8 @@ sequenceDiagram
 |Description|Activate / Desactive a recurring alarm clock event|
 |--|--|
 |**URL**|**/stacron/@id/@state**|
+|Method|GET |
+|URL params|none|
 |Example|/stacron/1/on|
 ||/stacron/2/off|
 
@@ -184,6 +200,8 @@ sequenceDiagram
 |Description|Return the next alarm clock time and date|
 |--|--|
 |**URL**|**/nextcron**|
+|Method|GET |
+|URL params|none|
 
 GET /getcron
 GET /addcron
