@@ -1,4 +1,10 @@
 <h1 id="home-automation-audio-satellite-api-documentation">Home automation Audio Satellite API Documentation</h1>
+<p><a href="https://github.com/diving91/web-radio/blob/master/doc/api.md#manage-global-volume">Manage Global Volume</a><br>
+<a href="https://github.com/diving91/web-radio/blob/master/doc/api.md#manage-web-radio">Manage Web Radio</a><br>
+Manage Text-to-speech (TTS)<br>
+Manage alarm clock scheduler (recurring)<br>
+Manage alarm clock scheduler (non recurring)<br>
+Manage Web Radio Playlist</p>
 <h1 id="embedded-app">Embedded app</h1>
 
 <table>
