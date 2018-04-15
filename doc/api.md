@@ -1,33 +1,33 @@
 # Home automation Audio Satellite API Documentation
 
 - [Manage global volume](https://github.com/diving91/web-radio/blob/master/doc/api.md#manage-global-volume)
-+ **/setvol/@id**
-+ **/getvol**
+	+ **/setvol/@id**
+	+ **/getvol**
 - [Manage Web Radio](https://github.com/diving91/web-radio/blob/master/doc/api.md#manage-web-radio)
-+ **/radion**
-+ **/radioff**
-+ **/snooze**
-+ **/radiostate**
-+ **/radiotoggle**
+	+ **/radion**
+	+ **/radioff**
+	+ **/snooze**
+	+ **/radiostate**
+	+ **/radiotoggle**
 - [Manage Text-to-speech (TTS)](https://github.com/diving91/web-radio/blob/master/doc/api.md#manage-text-to-speech-tts)
-+ **/tts/@say**
-+ **/weather**
-+ **/jeedom**
+	+ **/tts/@say**
+	+ **/weather**
+	+ **/jeedom**
 - [Manage alarm clock scheduler (recurring)](https://github.com/diving91/web-radio/blob/master/doc/api.md#manage-alarm-clock-scheduler-recurring)
-+ **/getcron**
-+ **/addcron**
-+ **/delcron/@id**
-+ **/stacron/@id/@state**
-+ **/nextcron**
+	+ **/getcron**
+	+ **/addcron**
+	+ **/delcron/@id**
+	+ **/stacron/@id/@state**
+	+ **/nextcron**
 - [Manage alarm clock scheduler (non recurring)](https://github.com/diving91/web-radio/blob/master/doc/api.md#manage-alarm-clock-scheduler-non-recurring)
-+ **/getat**
-+ **/addat**
-+ **/delat/@id**
+	+ **/getat**
+	+ **/addat**
+	+ **/delat/@id**
 - [Manage Web Radio Playlist](https://github.com/diving91/web-radio/blob/master/doc/api.md#manage-web-radio-playlist)
-+ **/getstation**
-+ **/selstation/@id**
-+ **/upload**
-+ **/download**
+	+ **/getstation**
+	+ **/selstation/@id**
+	+ **/upload**
+	+ **/download**
 
 # Embedded app
 |Description|Local application|
