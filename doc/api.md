@@ -173,7 +173,7 @@ sequenceDiagram
 |URL params|cron=json to describe the alarm clock event|
 |Success||
 |Error||
-|Example|[http://myip/addcron?cron={"t":"23:10","d":[true,true,true,true,false,true,true],"c":"test event"}]()
+|Example|[http://myip/addcron?cron={"t":"23:10","d":\[true,true,true,true,false,true,true\],"c":"Thursdays"}](http://myip/addcron?cron={"t":"23:10","d":\[true,true,true,true,false,true,true\],"c":"Thursdays"})
 |
 
 ##
