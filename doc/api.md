@@ -150,6 +150,8 @@ sequenceDiagram
 	Note right of Audio Satellite: Web Radio restart
 ```
 
+![Alt](https://github.com/diving91/web-radio/blob/master/doc/jeedom_tts.jpg)
+
 ## Manage alarm clock scheduler (recurring)
 
 GET /getcron
