@@ -4,8 +4,8 @@
 <table>
 <thead>
 <tr>
-<th></th>
-<th></th>
+<th>Description</th>
+<th>Local application</th>
 </tr>
 </thead>
 <tbody>
@@ -27,21 +27,21 @@
 <table>
 <thead>
 <tr>
-<th>Description:</th>
+<th>Description</th>
 <th>Get current audio volume</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>URL:</td>
-<td><strong>/getvol</strong></td>
+<td>URL</td>
+<td>/getvol</td>
 </tr>
 <tr>
-<td>Methods:</td>
+<td>Method</td>
 <td>GET</td>
 </tr>
 <tr>
-<td>URL params:</td>
+<td>URL params</td>
 <td>None</td>
 </tr>
 </tbody>
