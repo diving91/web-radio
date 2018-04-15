@@ -121,6 +121,7 @@
 |Note|Use a web service from https://www.prevision-meteo.ch|
 ||Actual temperature, min/max temperature for today|
 || Actual weather condition, Today weather condition|
+
 ##
 
 |Description|Play an interaction result from Jeedom home automation system|
@@ -135,7 +136,8 @@
 ||This can be used with a non recurring alarm clock trigger|
 ||Typical use case: Jeedom query (**/nextcron**) the next wake up time every day at 00:00 and set (**/addat**) a non recurring wake-up time at  Web Radio wake up time +xx minutes to render interaction result|
 <br>
-<br>
+
+![jeedom tts](https://github.com/diving91/web-radio/blob/master/doc/jeedom_tts.jpg)
 
 ```mermaid
 sequenceDiagram
@@ -149,8 +151,6 @@ sequenceDiagram
 	Note right of Audio Satellite: TTS at 20:03
 	Note right of Audio Satellite: Web Radio restart
 ```
-
-![Alt](https://github.com/diving91/web-radio/blob/master/doc/jeedom_tts.jpg)
 
 ## Manage alarm clock scheduler (recurring)
 
