@@ -36,7 +36,41 @@
 <thead>
 <tr>
 <th>Description</th>
-<th>Get current audio volume</th>
+<th>Set current audio volume (1-100)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URL</td>
+<td>//setvol/@id</td>
+</tr>
+<tr>
+<td>Method</td>
+<td>GET</td>
+</tr>
+<tr>
+<td>URL params</td>
+<td>none</td>
+</tr>
+<tr>
+<td>Success</td>
+<td>{“Status”:“OK”,“Volume”:“24”}</td>
+</tr>
+<tr>
+<td>Error</td>
+<td>none</td>
+</tr>
+<tr>
+<td>Note</td>
+<td>Volume is set permanent even after a shutdown</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Get current audio volume (1-100)</th>
 </tr>
 </thead>
 <tbody>
