@@ -1,10 +1,10 @@
 <h1 id="home-automation-audio-satellite-api-documentation">Home automation Audio Satellite API Documentation</h1>
 <p><a href="https://github.com/diving91/web-radio/blob/master/doc/api.md#manage-global-volume">Manage Global Volume</a><br>
 <a href="https://github.com/diving91/web-radio/blob/master/doc/api.md#manage-web-radio">Manage Web Radio</a><br>
-Manage Text-to-speech (TTS)<br>
-Manage alarm clock scheduler (recurring)<br>
-Manage alarm clock scheduler (non recurring)<br>
-Manage Web Radio Playlist</p>
+<a href="https://github.com/diving91/web-radio/blob/master/doc/api.md#manage-text-to-speech-tts">Manage Text-to-speech (TTS)</a><br>
+<a href="https://github.com/diving91/web-radio/blob/master/doc/api.md#manage-alarm-clock-scheduler-recurring">Manage alarm clock scheduler (recurring)</a><br>
+<a href="https://github.com/diving91/web-radio/blob/master/doc/api.md#manage-alarm-clock-scheduler-non-recurring">Manage alarm clock scheduler (non recurring)</a><br>
+<a href="https://github.com/diving91/web-radio/blob/master/doc/api.md#manage-web-radio-playlist">Manage Web Radio Playlist</a></p>
 <h1 id="embedded-app">Embedded app</h1>
 
 <table>
