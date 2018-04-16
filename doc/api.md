@@ -277,15 +277,9 @@ Non recurring alarm clock events are triggered only once at a defined date and t
 |**URL**|**/delat/@id**|
 |Method|GET |
 |URL params|none|
-|Success|{"Status":"OK","Time":"Mardi 17\/04\/2018 06:30"}|
-|Error|{“Status”:“KO”,“Time”:“Not Found”}|
-
-GET /getat
-GET /addat
-GET /delat/@id:[1-9][0-9]*
-
-addat?at={%22d%22:1523823600,%22t%22:%22tts%22}
-addat?at={"d":1523823600,"t":"tts"}
+|Success|{"Status":"OK","At":"66 Deleted"}|
+|Error|{“Status”:“KO”,“At”:“Not Found”}|
+|Example|/delat/66|
 
 ## Manage Web Radio Playlist 
 GET /getstation
