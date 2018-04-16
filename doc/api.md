@@ -175,6 +175,7 @@ sequenceDiagram
 ```
 
 ## Manage alarm clock scheduler (recurring)
+Recurring alarm clock events are triggered at a defined time on specified days every week
 |Description|Return the list of alarm clock events|
 |--|--|
 |**URL**|**/getcron**|
@@ -240,8 +241,42 @@ sequenceDiagram
 |Note|Return an error state when all alarm clock events are deactivated, or no alarm clock is defined|
 
 ## Manage alarm clock scheduler (non recurring)
+Non recurring alarm clock events are triggered only once at a defined date and time
+|Description|Return the list of non recurring alarm clock events|
+|--|--|
+|**URL**|**/getat**|
+|Method|GET |
+|URL params|none|
+|Success|{"Status":"OK","At":[{"id":"66","date":"Mercredi 25\/04\/2018 22:41","ts":1524688860,"type":"A"},{"id":"67","date":"Vendredi 27\/04\/2018 12:20","ts":1524824400,"type":"B"},{"id":"68","date":"Dimanche 29\/04\/2018 15:40","ts":1525009200,"type":"C"}]}|
+|Error|{“Status”:“KO”,“At”:“Not Found”}|
+|Note|"id" is the id to use to delete (**/delat**) a non recurring alarm clock event|
+||"date" is the alarm clock event in clear text|
+||"ts" is the alarm clock event in Unix timestamp format|
+||"type" is the alarm clock event type "A"= Radio_on, "B" = Radio_off, "C"=Text-to-Speech (i.e. call Jeedom interaction)|
 
+##
 
+|Description|Define (add) a non recurring alarm clock event|
+|--|--|
+|**URL**|**/addat**|
+|Method|GET |
+|URL params|at={"d":timestamp,"t":"tts"}|
+|Success|{"Status":"OK","At":"22:20 2018-04-15","Type":"tts"}|
+|Error|none|
+|Example|/addat?at={%22d%22:1523823600,%22t%22:%22tts%22}|
+|Note|"d" is the Unix time stamp at which the alarm clock will be triggered|
+||if the timestamp is <= current time stamp, the event is omitted|
+||"t" is the type of event "on"\|"off"\|"tts"|
+
+##
+
+|Description|Delete a non recurring alarm clock event|
+|--|--|
+|**URL**|**/delat/@id**|
+|Method|GET |
+|URL params|none|
+|Success|{"Status":"OK","Time":"Mardi 17\/04\/2018 06:30"}|
+|Error|{“Status”:“KO”,“Time”:“Not Found”}|
 
 GET /getat
 GET /addat
