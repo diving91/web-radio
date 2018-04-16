@@ -282,8 +282,58 @@ Non recurring alarm clock events are triggered only once at a defined date and t
 |Example|/delat/66|
 
 ## Manage Web Radio Playlist 
-GET /getstation
-GET /selstation/@id:[0-9][0-9]*
-POST /upload
-GET /download
+
+|Description|Returns the list of Web radio in the playlist|
+|--|--|
+|**URL**|**/getstation**|
+|Method|GET |
+|URL params|none|
+|Success|{"Status":"OK","station":[{"URL":"http:\/\/stream1.chantefrance.com\/stream_chante_france.mp3 ","name":"Chante France","selected":"1"},{"URL":"http:\/\/cdn.nrjaudio.fm\/audio1\/fr\/30001\/mp3_128.mp3?origine=fluxradios ","name":"NRJ","selected":"0"}]}|
+|Error|{“Status”:“KO”,“station”:“Not Found”}|
+|Note|"URL" is the url of the web Radio stream|
+||"name" is the nickname of the Web Radio|
+||"selected" = 1 for the active Web radio in the the playlist (=0 for other Web Radio)|
+
+##
+
+|Description|Select a Web Radio in the Playlist|
+|--|--|
+|**URL**|**/selstation/@id**|
+|Method|GET |
+|URL params|none|
+|Success|{“Status”:“OK”,“Station”:“2”}|
+|Error|{“Status”:“KO”,“station”:“Not Found”}|
+|Example|/selstation/2|
+
+##
+
+|Description|Upload a text file describing the Web Radio Playlist|
+|--|--|
+|**URL**|**/upload**|
+|Method|POST|
+|URL params|none|
+|POST datas||
+|Success|{"Status":"OK","file":"station.txt"}|
+|Error|{"Status":"OK","file":"#Error type#"}|
+Playlist text file is an ASCII text file as example:
+```
+1 http://stream1.chantefrance.com/stream_chante_france.mp3 #Chante France
+0 http://cdn.nrjaudio.fm/audio1/fr/30001/mp3_128.mp3?origine=fluxradios #NRJ
+0 http://cdn.nrjaudio.fm/audio1/fr/30601/mp3_128.mp3?origine=fluxradios #Nostalgie
+0 http://cdn.nrjaudio.fm/audio1/fr/30201/mp3_128.mp3?origine=fluxradios #Cherie FM
+0 http://roo8ohho.cdn.dvmr.fr/live/franceinfo-midfi.mp3?ID=f9fbk29m84 #France Info
+0 http://icepe2.infomaniak.ch/impactfm-128.mp3 #Impact FM
+0 http://radioclassique.ice.infomaniak.ch/radioclassique-high.mp3 #Radio Classique
+```
+
+##
+
+|Description|Download a text file describing the Web Radio Playlist|
+|--|--|
+|**URL**|**/download**|
+|Method|GET |
+|URL params|none|
+|Success|Will open a dialog to download a text file **station.txt**|
+|Error|none|
+
 
