@@ -331,7 +331,7 @@ File example:
 ```
 HTML Code Example:
 ```html
-	<form id="upform" enctype="multipart/form-data" style = "display:none;">
+	<form id="upform" enctype="multipart/form-data">
 	    <input id="fileselect" name="file" type="file" />
 	    <input id="fileupload" type="button" value="Charger" disabled/>
 	</form>
