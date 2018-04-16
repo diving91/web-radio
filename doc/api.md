@@ -176,6 +176,7 @@ sequenceDiagram
 
 ## Manage alarm clock scheduler (recurring)
 Recurring alarm clock events are triggered at a defined time on specified days every week
+
 |Description|Return the list of alarm clock events|
 |--|--|
 |**URL**|**/getcron**|
@@ -242,6 +243,7 @@ Recurring alarm clock events are triggered at a defined time on specified days e
 
 ## Manage alarm clock scheduler (non recurring)
 Non recurring alarm clock events are triggered only once at a defined date and time
+
 |Description|Return the list of non recurring alarm clock events|
 |--|--|
 |**URL**|**/getat**|
