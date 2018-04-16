@@ -312,7 +312,7 @@ Non recurring alarm clock events are triggered only once at a defined date and t
 |**URL**|**/upload**|
 |Method|POST|
 |URL params|none|
-|POST datas||
+|POST datas|See below javascript example|
 |Success|{"Status":"OK","file":"station.txt"}|
 |Error|{"Status":"OK","file":"#Error type#"}|
 |Note|Playlist file (csv format) is an ASCII text file|
@@ -336,7 +336,7 @@ HTML Code Example:
 	    <input id="fileupload" type="button" value="Charger" disabled/>
 	</form>
 ```
-Javascript Example:
+javascript Example:
 ```javascript
 	$('#fileselect').on('change', function() {
 		var file = this.files[0];
