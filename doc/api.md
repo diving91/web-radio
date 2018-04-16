@@ -199,9 +199,9 @@ Recurring alarm clock events are triggered at a defined time on specified days e
 |Error|none|
 |Example|[http://myip/addcron?cron={"t":"23:10","d":\[true,true,true,true,false,true,true\],"c":"noThursdays"}](http://myip/addcron?cron={"t":"23:10","d":\[true,true,true,true,false,true,true\],"c":"noThursdays"})|
 |Note|When added, the alarm clock event is activated. You can use **/stacron** to desactivate|
-||t: is the time format hh:mm|
-||d: is an array to specify on which days the alarm clock will run. The array starts on [sunday, monday,..., saturday]|
-||c: is a nickname for the alarm clock event|
+||"t": is the time format hh:mm|
+||"d": is an array to specify on which days the alarm clock will run. The array starts on [sunday, monday,..., saturday]|
+||"c": is a nickname for the alarm clock event|
 
 ##
 
@@ -315,6 +315,7 @@ Non recurring alarm clock events are triggered only once at a defined date and t
 |POST datas||
 |Success|{"Status":"OK","file":"station.txt"}|
 |Error|{"Status":"OK","file":"#Error type#"}|
+
 Playlist text file is an ASCII text file as example:
 ```
 1 http://stream1.chantefrance.com/stream_chante_france.mp3 #Chante France
