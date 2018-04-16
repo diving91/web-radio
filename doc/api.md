@@ -329,7 +329,37 @@ File example:
 0 http://icepe2.infomaniak.ch/impactfm-128.mp3 #Impact FM
 0 http://radioclassique.ice.infomaniak.ch/radioclassique-high.mp3 #Radio Classique
 ```
-
+HTML Code Example:
+```html
+	<form id="upform" enctype="multipart/form-data" style = "display:none;">
+	    <input id="fileselect" name="file" type="file" />
+	    <input id="fileupload" type="button" value="Charger" disabled/>
+	</form>
+```
+Javascript Example:
+```javascript
+	$('#fileselect').on('change', function() {
+		var file = this.files[0];
+		if (file.size > 4096 || file.type != "text/plain") {
+			alert('Taille Max 4K, Fichier texte');
+			$("#fileupload").prop('disabled', true);
+		}
+		else $("#fileupload").prop('disabled', false);
+	});
+	$('#fileupload').on('click', function() {
+		$.ajax({
+			url: './upload',
+			type: 'POST',
+			// Form data
+			data: new FormData($('form')[0]),
+			// Tell jQuery not to process data or worry about content-type
+			// You *must* include these options!
+			cache: false,
+			contentType: false,
+			processData: false,
+		});
+	});
+```
 ##
 
 |Description|Download a text file describing the Web Radio Playlist|
