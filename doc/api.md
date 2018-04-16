@@ -316,7 +316,7 @@ Non recurring alarm clock events are triggered only once at a defined date and t
 |Success|{"Status":"OK","file":"station.txt"}|
 |Error|{"Status":"OK","file":"#Error type#"}|
 |Note|Playlist file (csv format) is an ASCII text file|
-||First item 1|0 describe the selected Web Radio|
+||First item 1\|0 describe the selected Web Radio|
 ||#item is the Web Radio Nickname|
 
 File example:
