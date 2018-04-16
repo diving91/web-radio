@@ -315,8 +315,11 @@ Non recurring alarm clock events are triggered only once at a defined date and t
 |POST datas||
 |Success|{"Status":"OK","file":"station.txt"}|
 |Error|{"Status":"OK","file":"#Error type#"}|
+|Note|Playlist file (csv format) is an ASCII text file|
+||First item 1|0 describe the selected Web Radio|
+||#item is the Web Radio Nickname|
 
-Playlist text file is an ASCII text file as example:
+File example:
 ```
 1 http://stream1.chantefrance.com/stream_chante_france.mp3 #Chante France
 0 http://cdn.nrjaudio.fm/audio1/fr/30001/mp3_128.mp3?origine=fluxradios #NRJ
