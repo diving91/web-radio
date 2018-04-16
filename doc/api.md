@@ -195,7 +195,7 @@ sequenceDiagram
 |URL params|?cron=json to describe the alarm clock event|
 |Success|TODO|
 |Error|none|
-|Example|[http://myip/addcron?cron={"t":"23:10","d":\[true,true,true,true,false,true,true\],"c":"Thursdays"}](http://myip/addcron?cron={"t":"23:10","d":\[true,true,true,true,false,true,true\],"c":"Thursdays"})|
+|Example|[http://myip/addcron?cron={"t":"23:10","d":\[true,true,true,true,false,true,true\],"c":"noThursdays"}](http://myip/addcron?cron={"t":"23:10","d":\[true,true,true,true,false,true,true\],"c":"noThursdays"})|
 |Note|When added, the alarm clock event is activated. You can use **/stacron** to desactivate|
 ||t: is the time format hh:mm|
 ||d: is an array to specify on which days the alarm clock will run. The array starts on [sunday, monday,..., saturday]|
@@ -208,9 +208,9 @@ sequenceDiagram
 |**URL**|**/delcron/@id**|
 |Method|GET |
 |URL params|none|
-|Success|TODO|
-|Error|TODO|
-|Example|/delcron/1|
+|Success|{"Status":"OK","Cron":"2"}|
+|Error|{"Status":"KO","Cron":"78 Not Found"}|
+|Example|/delcron/2|
 |Note|@id is the event id to delete and starts at 0 in the **/getcron** list|
 
 ##
@@ -220,8 +220,9 @@ sequenceDiagram
 |**URL**|**/stacron/@id/@state**|
 |Method|GET |
 |URL params|none|
-|Success|TODO|
-|Error|TODO|
+|Success|{"Status":"OK","Cron":"4","State":"on"}|
+|Success|{"Status":"OK","Cron":"4","State":"off"}|
+|Error|{"Status":"KO","Cron":"78 Not Found"}|
 |Example|/stacron/1/on|
 ||/stacron/2/off|
 |Note|@id is the event id to activate/desactive and starts at 0 in the **/getcron** list|
@@ -229,16 +230,19 @@ sequenceDiagram
 
 ##
 
-|Description|Return the next alarm clock time and date|
+|Description|Return the next alarm clock event day, date and time|
 |--|--|
 |**URL**|**/nextcron**|
 |Method|GET |
 |URL params|none|
-|Success|TODO|
-|Error|TODO|
-|Note||
+|Success|{"Status":"OK","Time":"Mardi 17\/04\/2018 06:30"}|
+|Error|{“Status”:“KO”,“Time”:“Not Found”}|
+|Note|Return an error state when all alarm clock events are deactivated, or no alarm clock is defined|
 
 ## Manage alarm clock scheduler (non recurring)
+
+
+
 GET /getat
 GET /addat
 GET /delat/@id:[1-9][0-9]*
