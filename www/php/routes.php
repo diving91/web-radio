@@ -5,11 +5,15 @@ Flight::route('/',function(){
 
 Flight::route('GET /getvol', ['logic' , 'getVolume']);
 Flight::route('GET /setvol/@id:[1-9][0-9]?|100' , ['logic', 'setVolume']); // volume between 1 and 100
+Flight::route('GET /setvol/@id',function($id){
+	Flight::json(array('Status' => 'KO', 'Volume' => 'Out of Range'));
+});
 
 Flight::route('GET /radion', ['logic' , 'startRadio']);
 Flight::route('GET /radioff', ['logic' , 'stopRadio']);
 Flight::route('GET /snooze', ['logic' , 'snooze']);
 Flight::route('GET /radiostate', ['logic' , 'statusRadio']);
+Flight::route('GET /radiotoggle', ['logic' , 'toggleRadio']);
 
 Flight::route('GET /tts/@say', ['logic' , 'playTTS']);
 Flight::route('GET /weather', ['logic' , 'ttsWeather']);

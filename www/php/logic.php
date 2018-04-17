@@ -268,15 +268,20 @@ class Logic {
 	// Start Radio
 	public function startRadio() {
 		if (!self::isAudioRunning()) {	// Radio is not running, we can start it
-			$station = self::whichStation();
-			exec("screen -dmS audiorun /usr/bin/mpg123 -q $station");
-			if (debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS,2)[1]['function'] == 'invokeMethod') Flight::json(array('Status' => 'OK', 'Radio' => 'Running'));
+			$station = self::whichStation();  // selected radio in playlist or default radio if no playlist
+			$ok = self::checkRadioIsReachable($station); // check radio is reachable
+			//$ok = self::checkRadioIsReachable("http://stream.chantefrance.com/stream_chante_france.mp3");
+			if ($ok != true) { 
+				$station = Flight::get("localStation"); // default to local mp3
+			}
+			exec("screen -dmS audiorun /usr/bin/mpg123 -q --loop -1 $station");
+			if (debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS,2)[1]['function'] == 'invokeMethod') Flight::json(array('Status' => 'OK', 'Radio' => 'Running', "path" => $station));
 		}
 		else {
 			if (debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS,2)[1]['function'] == 'invokeMethod') Flight::json(array('Status' => 'OK', 'Radio' => 'Was already Running'));
 		}
 	}
-
+	
 	// Stop Radio
 	public function stopRadio() {
 		exec('screen -p 0 -S audiorun -X kill');
@@ -301,19 +306,37 @@ class Logic {
 		else Flight::json(array('Status' => 'OK', 'Radio' => 'Stopped'));
 	}
 
+	// Toggle Radio ON/OFF 
+	public function toggleRadio() {
+		if (self::isAudioRunning()) {
+			self::stopRadio();
+			Flight::json(array('Status' => 'OK', 'Radio' => 'Stopped'));
+		}
+		else {
+			self::startRadio();
+			Flight::json(array('Status' => 'OK', 'Radio' => 'Running'));
+		}
+	}
+
 	// Play TTS
 	public function playTTS($say) {
-		$voice = Flight::tts()->speech([
-			'key' => Flight::get('ttsKey'),
-			'hl' => 'fr-fr',
-			'src' => $say,
-			'r' => '0',
-			'c' => 'mp3',
-			'f' => '44khz_16bit_stereo',
-			'ssml' => 'flase',
-			'b64' => 'true'
-		]);
-		if (empty($voice['error'])) {	// No error when acquiring tts result
+		if (Flight::get("ttsLocal")) {
+			$tts = '/usr/bin/pico2wave -l fr-FR -w /tmp/tts.wav "<pitch level=\'100\'> <speed level=\'85\'>'.$say.'"';
+			exec($tts);
+		}
+		else {
+			$voice = Flight::tts()->speech([
+				'key' => Flight::get('ttsKey'),
+				'hl' => 'fr-fr',
+				'src' => $say,
+				'r' => '0',
+				'c' => 'mp3',
+				'f' => '44khz_16bit_stereo',
+				'ssml' => 'false',
+				'b64' => 'true'
+			]);
+		}
+		if (Flight::get("ttsLocal") || empty($voice['error'])) {	// No error when acquiring tts result
 			$radio2Restart=false;
 			if (self::isAudioRunning()) {	// Radio is running, need to stop
 				self::stopRadio();
@@ -321,16 +344,21 @@ class Logic {
 			}
 			$prevVol = self::getVolume(); 			// Get current Volume
 			self::setVolume(Flight::get('ttsVol'));		// Set TTS Volume
-			file_put_contents('/tmp/tts.mp3', base64_decode($voice['response']));
-			exec('screen -dmS audiorun /usr/bin/mpg123 -q /tmp/tts.mp3');
+			if (Flight::get("ttsLocal")) {
+				exec('screen -dmS audiorun /usr/bin/aplay /tmp/tts.wav');
+			}
+			else {
+				file_put_contents('/tmp/tts.mp3', base64_decode($voice['response']));
+				exec('screen -dmS audiorun /usr/bin/mpg123 -q /tmp/tts.mp3');
+			}
 			while (self::isAudioRunning()) {sleep(1);}	//Wait end of TTS player
 			self::setVolume($prevVol);			// Restore Volume
 			if ($radio2Restart) self::startRadio();		// Restart Radio if this was running before TTS
 			Flight::json(array('Status' => 'OK'));
 		}
 		else Flight::json(array('Status' => 'TTS: '.$voice['error']));
-	}	
-
+	}
+	
 	// Return if Radio is running or Stopped
 	private function isAudioRunning() {
 		$x = shell_exec("screen -ls");
@@ -353,9 +381,31 @@ class Logic {
 			if ($x == '') {$x = Flight::get("defaultStation");}
 		}
 		else $x = (Flight::get("defaultStation"));
-		return $x;
+		return trim($x);
 	}
-	
+
+	// Check the Radio stream is OK
+	private function checkRadioIsReachable($url) {
+		$options = array(
+			CURLOPT_CONNECT_ONLY	=> false,
+			CURLOPT_FRESH_CONNECT	=> true,
+			CURLOPT_FORBID_REUSE	=> true,
+			CURLOPT_RETURNTRANSFER	=> false,	// return web page
+			CURLOPT_HEADER		=> false,	// don't return headers
+			CURLOPT_FOLLOWLOCATION	=> true,	// follow redirects
+			CURLOPT_AUTOREFERER	=> true,	// set referer on redirect
+			CURLOPT_CONNECTTIMEOUT	=> 1,		// timeout on connect
+			CURLOPT_TIMEOUT		=> 1,		// timeout on response
+		);
+		$ch = curl_init( $url );
+		curl_setopt_array( $ch, $options );
+		$content = curl_exec( $ch );
+		$header  = curl_getinfo( $ch );
+		curl_close( $ch );
+		if ($header['http_code'] == 200) return true;
+		else return false;
+	}
+
 	// TTS for local weather of the day
 	public function ttsWeather() {
 		// https://www.prevision-meteo.ch/uploads/pdf/recuperation-donnees-meteo.pdf
@@ -370,5 +420,13 @@ class Logic {
 	// TTS from Jeedom interaction answer
 	public function ttsJeedom() {
 		self::playTTS(file_get_contents(Flight::get("ttsJeedom")));
+	}
+
+	// String Saint du jour
+	private function getTodayEphemeris() {
+		$x = file_get_contents('/srv/www/home.fr/public/conf/ephemeris.json');
+		$x = json_decode($x,true);
+		$x = $x[date('F')][date('j')-1][1].' '.$x[date('F')][date('j')-1][0];
+		return $x;
 	}
 }
