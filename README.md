@@ -1,6 +1,8 @@
 ## Home automation audio satellite with web radio, text-to-speech and alarm clock features
 
-Designed around a Raspberry-PI Zero W and a [HiFiBerry MiniAmp](https://www.hifiberry.com/shop/boards/miniamp/) audio amplifier board combined with a mini passive speaker.<br>I started this project because my alarm-clock's knobs were difficult to manipulate after years of service. In the same time I was searching for a way to diffuse Text-to-Speech messages from my [Jeedom](http://jeedom.fr) home automation system as well as being able to broadcast internet radio streams.
+Designed around a Raspberry-PI Zero W and a [HiFiBerry MiniAmp](https://www.hifiberry.com/shop/boards/miniamp/) audio amplifier board combined with a mini passive speaker.
+
+I started this project because my alarm-clock's knobs were difficult to manipulate after years of service. In the same time I was searching for a way to diffuse Text-to-Speech messages from my [Jeedom](http://jeedom.fr) home automation system as well as being able to broadcast internet radio streams.
 
 I decided to combine all needs in an all in one audio satellite with a RESTfull API in order to control it from my home automation system.
 
