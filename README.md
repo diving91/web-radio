@@ -23,7 +23,7 @@ Main features of this project are:
 - Local web application to control the audio satellite
 - No knobs or display. My old alarm clock still projects time & temperature on the ceilling. For the knobs, I use a 4 buttons 433Mhz remote control that interacts with the audio satellite via Jeedom (or any other home automation system)
 
-(french version)[]
+(french version)[https://github.com/diving91/web-radio/blob/master/fr%20intro.md]
 
 ## Documentation
 
