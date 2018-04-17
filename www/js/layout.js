@@ -1,6 +1,5 @@
-// Todo
-// check internet and default to local mp3 when KO
-// voiceRSS vs picosvox (?)
+//todo
+// Saint du jour, dicton, blague, evt du jour
 
 // Globals
 var radioState;  // boolean to check Radio is running or not
@@ -271,7 +270,7 @@ $(document).ready( function() {
 		});
 	});
 
-	// Download Station file - Requires IE13/Edge - Doe²s not work with Safari
+	// Download Station file - Requires IE13/Edge - DoeÂ²s not work with Safari
 	$('#downstation').click(function() {
 		var file_path = './station/station.txt';
 		var a = document.createElement('A');
