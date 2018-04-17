@@ -1,8 +1,8 @@
 MAILTO=""
 @reboot /bin/sh /srv/www/home.fr/public/conf/cron.sh >/dev/null 2>&1
 #BEGIN
-#40 06 * * 1,2,3,4,5 /usr/bin/curl localhost/radion >/dev/null 2>&1 #Semaine
-#50 07 * * 6 /usr/bin/curl localhost/radion >/dev/null 2>&1 #Samedi 1
+30 06 * * 1,2,3,4,5 /usr/bin/curl localhost/radion >/dev/null 2>&1 #Semaine
+50 07 * * 6 /usr/bin/curl localhost/radion >/dev/null 2>&1 #Samedi 1
 #50 08 * * 6 /usr/bin/curl localhost/radion >/dev/null 2>&1 #Samedi 2
-#50 08 * * 0 /usr/bin/curl localhost/radion >/dev/null 2>&1 #Dimanche
+50 08 * * 0 /usr/bin/curl localhost/radion >/dev/null 2>&1 #Dimanche
 #50 4 * * 5 /usr/bin/curl localhost/radion >/dev/null 2>&1 #Venlo
