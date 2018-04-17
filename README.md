@@ -13,14 +13,16 @@ Main features of this project are:
 - Volume control
 - As many as needed daily recurring Alarm clock 
 - As many as needed one shoot events to trigger Web radio On, Off or to play TTS messages
-- For higher reliability, alarm events are triggered locally from a crontab.
+- For higher reliability, alarm events are triggered locally from a crontab. Still the Home automation system can program alarm events issued from a calendar. 
 - Still for reliability, when a web radio is not reachable, a local music file is played to ensure I'll wake up every mornings
 - Play Text-to-Speech messages delivered by my home automation system
 - Play local Text-to-Speech messages like weather forecast of the day
 - Text-to-speech engine online [voicerss](http://www.voicerss.org/) or offline (libttspico-utils)
-- RESTFull API with all functionality included to control the audio satellite
+- RESTFull API with all functionalities included to control the audio satellite
 - Local web application to control the audio satellite
 - No knobs or display. My old alarm clock still projects time & temperature on the ceilling. For the knobs, I use a 4 buttons 433Mhz remote control that interacts with the audio satellite via Jeedom (or any other home automation system)
+
+(french version)[]
 
 ## Documentation
 
