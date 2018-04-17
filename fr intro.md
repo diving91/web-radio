@@ -23,3 +23,7 @@ Les principales caractéristiques de ce projet sont:
 - Application Web locale pour contrôler le satellite audio  
 - Pas de boutons ou d'affichage. Mon vieux réveil projette toujours le temps et la température au plafond. Pour les boutons, j'utilise une télécommande 4 boutons RF433Mhz qui interagit avec le satellite audio via Jeedom (ou tout autre système domotique)
 
+[english version](https://github.com/diving91/web-radio/blob/master/README.md)
+
+La version anglaise décrit l'API RESTfull, l'application web et un guide d'installation
+
