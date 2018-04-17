@@ -13,6 +13,7 @@ Main features of this project are:
 - Volume control
 - As many as needed daily recurring Alarm clock 
 - As many as needed one shoot events to trigger Web radio On, Off or to play TTS messages
+- Alarm Snooze function
 - For higher reliability, alarm events are triggered locally from a crontab. Still the Home automation system can program alarm events issued from a calendar. 
 - Still for reliability, when a web radio is not reachable, a local music file is played to ensure I'll wake up every mornings
 - Play Text-to-Speech messages delivered by my home automation system
