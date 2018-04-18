@@ -39,5 +39,8 @@ tmpfs /var/tmp tmpfs defaults,noatime,nosuid,size=10m 0 0
 # tmpfs /var/log tmpfs defaults,noatime,nosuid,mode=0755,size=10m 0 0
  ```
  - You can also mount /var.log in tmpfs, but you then loose the logs for debugging
+ - Install needed additional packages
+ >sudo apt-get install alsa-utils mpg123 screen nginx php7.0-fpm php7.0-curl at libttspico-utils
+ - reboot
 >sudo shutdown -r now
 
