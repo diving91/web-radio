@@ -1,4 +1,4 @@
-## Configure audio
+## Audio card HifiBerry setup
 
 ### Check HifiBerry is well configured
 - Check the sound card
