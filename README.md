@@ -33,6 +33,6 @@ Main features of this project are:
 ![Apps UI](https://github.com/diving91/web-radio/blob/master/doc/app_sml.jpg)
 
 ## How to build
-... work in progress
+- [Hardware Setup](https://github.com/diving91/web-radio/blob/master/doc/Hardware.md)
 
 
