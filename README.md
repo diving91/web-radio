@@ -36,9 +36,9 @@ Main features of this project are:
 - [Hardware setup](https://github.com/diving91/web-radio/blob/master/doc/Hardware.md)
 - [Headless raspbian setup](https://github.com/diving91/web-radio/blob/master/doc/Headless.md)
 - [Audio setup](https://github.com/diving91/web-radio/blob/master/doc/audio.md)
-- [Web serveur setup](https://github.com/diving91/web-radio/blob/master/doc/web%20server.md) - work in progress
+- [Web server setup](https://github.com/diving91/web-radio/blob/master/doc/web%20server.md) - work in progress
 - [Application & API setup](https://github.com/diving91/web-radio/blob/master/doc/application.md) - work in progress
-- [Home automation exemples with Jeedom](https://github.com/diving91/web-radio/blob/master/doc/jeedom.md) - work in progress
+- [Home automation examples with Jeedom](https://github.com/diving91/web-radio/blob/master/doc/jeedom.md) - work in progress
 
 ### Your're Done ! :-)
 
