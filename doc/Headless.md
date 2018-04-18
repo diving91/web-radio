@@ -19,10 +19,12 @@ ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 
 - Insert the SD card in PI Zero card slot and power it up
 - Connect with putty in ssh ( login: pi /password: raspberry)
-- run raspi-config to configure timezone, locales, change password, ...
+- Run raspi-config to configure timezone, locales, change password, ...
+> sudo raspi-config
 - >sudo wpa_passphrase '#your_ssid#' '#your_pwd#'
 - >sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
-- and replace psk with above provided key
+
+and replace psk with above provided key
 ```
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
   network={
