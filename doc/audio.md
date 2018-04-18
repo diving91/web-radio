@@ -58,8 +58,10 @@ pcm.hifiberry {
 with -c 2 you check that stereo is well mixed down to mono channel
 >aplay /usr/share/sounds/alsa/Front_Right.wav
 >mpg123 #your file#.mp3
->mpg123 [http://stream.chantefrance.com/stream_chante_france.mp3](http://stream.chantefrance.com/stream_chante_france.mp3)
+>mpg123 [http://stream1.chantefrance.com/stream_chante_france.mp3](http://stream1.chantefrance.com/stream_chante_france.mp3)
+>pico2wave -l fr-FR -w "tt.wav" "Bonjour il fait 12.3°" | aplay
 
+here you test that the picoTTS works well
 - Define audio volume
 >amixer sset Volume 30%
 >alsamixer
