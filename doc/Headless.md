@@ -17,11 +17,12 @@ ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
   }
  ```
 
-- Insert the SD in PI Zero card slot and power it up
+- Insert the SD card in PI Zero card slot and power it up
 - Connect with putty in ssh ( login: pi /password: raspberry)
-- run raspi-config to configure timezone, locales, change password, ...)
-- sudo wpa_passphrase '#your_ssid#' '#your_pwd#'
-- sudo nano /etc/wpa_supplicant/wpa_supplicant.conf (and replace psk with above provided key)
+- run raspi-config to configure timezone, locales, change password, ...
+- >sudo wpa_passphrase '#your_ssid#' '#your_pwd#'
+- >sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+- and replace psk with above provided key
 ```
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
   network={
@@ -31,12 +32,12 @@ ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
  ```
 
 - mount tmp directories in ram to spare SD card
-sudo nano /etc/fstab
+>sudo nano /etc/fstab
 ```
 tmpfs /tmp  tmpfs defaults,noatime,nosuid,size=10m 0 0
 tmpfs /var/tmp tmpfs defaults,noatime,nosuid,size=10m 0 0
 # tmpfs /var/log tmpfs defaults,noatime,nosuid,mode=0755,size=10m 0 0
  ```
  - You can also mount /var.log in tmpfs, but you then loose the logs for debugging
-- sudo shutdown -r now
+>sudo shutdown -r now
 
