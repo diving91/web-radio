@@ -35,6 +35,6 @@ Main features of this project are:
 ## How to build
 - [Hardware setup](https://github.com/diving91/web-radio/blob/master/doc/Hardware.md)
 - [Headless raspbian setup](https://github.com/diving91/web-radio/blob/master/doc/Headless.md)
-- [Audio setup](https://github.com/diving91/web-radio/blob/master/doc/Audio.md)
+- [Audio setup](https://github.com/diving91/web-radio/blob/master/doc/audio.md)
 
 
