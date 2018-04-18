@@ -33,6 +33,7 @@ Main features of this project are:
 ![Apps UI](https://github.com/diving91/web-radio/blob/master/doc/app_sml.jpg)
 
 ## How to build
-- [Hardware Setup](https://github.com/diving91/web-radio/blob/master/doc/Hardware.md)
+- [Hardware setup](https://github.com/diving91/web-radio/blob/master/doc/Hardware.md)
+- [Headless raspbian setup](https://github.com/diving91/web-radio/blob/master/doc/Headless.md)
 
 
