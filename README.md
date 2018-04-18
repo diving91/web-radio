@@ -42,4 +42,9 @@ Main features of this project are:
 
 ### Your're Done ! :-)
 
+you can contact me here: 
+User:diving91 https://www.jeedom.fr/forum/
+
+Forum thread for this project: https://www.jeedom.com/forum/viewtopic.php?f=23&t=35802
+
 
