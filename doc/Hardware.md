@@ -1,7 +1,7 @@
 ## List of Material
 
 - Raspberry Pi zero W
-- micro SD card 16GB
+- micro SD card (class10) 16GB
 - [Hifiberry Miniamp](https://is.gd/mJEA63) 
 - [Loud Speaker Visaton FR7/4](https://is.gd/3wkY3F)
 - Power supply (Use a quality one with 2A since it also provide power to the amplifier)
