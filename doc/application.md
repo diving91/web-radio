@@ -26,7 +26,7 @@ Note: with the  web app, you can change it later at your convenience
 
 - Define default settings of the application
 > sudo nano /srv/www/home.fr/public/conf/config.php
-````
+```php
 <?php
 $config = [
 	//"web" => ["base_url" => ""],
