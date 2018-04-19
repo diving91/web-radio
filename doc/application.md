@@ -18,7 +18,9 @@
 0 http://radioclassique.ice.infomaniak.ch/radioclassique-high.mp3 #Radio Classique
 ````
 File structure is "favorite \<space> radio_stream_url \<space> #radio_nickname"
+
 favorite = 1 for only one station (the one that will be started when radio is put ON)
+
 Note: with the app, you can change it later at your convenience
 > chmod 664/srv/www/home.fr/public/conf/station.txt<br>
 
