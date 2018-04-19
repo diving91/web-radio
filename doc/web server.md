@@ -2,7 +2,7 @@
 
 >sudo service nginx start
 
-from here, [http://your_ip](http://your_ip) should show a welcome page
+from here, [http://IP of your audio satellite](http://IP_of_your_audio_satellite) should show a welcome page
 - Create www root structure and configure php FastCGI Process Manager
 >sudo service php7.0-fpm restart<br>
 >sudo mkdir /srv/www<br>
