@@ -18,7 +18,7 @@ from here, [http://#your IP#](http://#your IP#) should show a welcome page
 > sudo nano /etc/nginx/sites-available/home.fr
 ````
 server {
-	server_name home.fr 192.168.1.117;
+	server_name home.fr ##your IP##;
 	access_log /srv/www/home.fr/logs/access.log;
 	error_log /srv/www/home.fr/logs/error.log;
 	root /srv/www/home.fr/public/;
