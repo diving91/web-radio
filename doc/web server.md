@@ -4,11 +4,11 @@
 
 from here, [http://your_ip](http://your_ip) should show a welcome page
 - Create www root structure and configure php FastCGI Process Manager
-> sudo service php7.0-fpm restart
-> sudo mkdir /srv/www
-> mkdir /srv/www/home.fr
-> cd /srv/www/home.fr
->mkdir logs
+>sudo service php7.0-fpm restart<br>
+>sudo mkdir /srv/www<br>
+>mkdir /srv/www/home.fr<br>
+>cd /srv/www/home.fr<br>
+>mkdir logs<br>
 >touch logs/access.log
 >touch logs/error.log
 > mkdir public
