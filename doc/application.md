@@ -1,5 +1,4 @@
+## Install and configure web application
 
 
-
-> Written with [StackEdit](https://stackedit.io/).
 
