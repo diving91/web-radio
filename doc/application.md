@@ -68,7 +68,8 @@ This is for EU stations. it is regularly updated when the urls are changed
 [https://www.sound-fishing.net/bruitages_sonnerie-sonnette.html](https://www.sound-fishing.net/bruitages_sonnerie-sonnette.html)
 Many file are free, other are available for relative low cost
 
-You're finished and can test [http://IP of your audio satellite](http://IP_of_your_audio_satellite) - Enjoy !
+<br><br><br>
+__You're finished and can test__ [http://IP of your audio satellite](http://IP_of_your_audio_satellite) - __Enjoy !__
 - reboot to check the defined alarms are effectively permanent 
 >sudo shutdown -r now
 
