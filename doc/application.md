@@ -43,7 +43,7 @@ $config = [
 					"snooze" => [ "delay" => '+5 minutes']
 ];
 ````
-
+<br>
 
 |field|field|Description|
 |--|--|--|
