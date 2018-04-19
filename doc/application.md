@@ -35,7 +35,7 @@ $config = [
 				"vol" => 70,
 				"localTTS" => true,
 				"weatherUrl" => 'https://www.prevision-meteo.ch/services/json/#your city name#',
-				"jeedomUrl" => 'http://192.168.1.108/core/api/jeeApi.php?apikey=#your Jeedom API key#&type=interact&query=#your interaction query#'],
+				"jeedomUrl" => 'http://#your jeedom IP#/core/api/jeeApi.php?apikey=#your Jeedom API key#&type=interact&query=#your interaction query#'],
 	"cron" => [ "path" => '/srv/www/home.fr/public/conf/cron.txt'],
 	"station" => [ "path" => '/srv/www/home.fr/public/station/station.txt',
 					"local" => '/srv/www/home.fr/public/conf/clocher-x12-SF.mp3',
@@ -44,4 +44,17 @@ $config = [
 ];
 ````
 
+|field|field|Description|
+|--|--|--|
+|**layout_title**|**/title**| The name that will appear in the apps header|
+|**tts**|**voiceRSSkey**| Replace #your VoiceRSS API key# by you API key|
+||**vol**|Volume for TTS audio - tune it to adapt the volume for your needs|
+||**localTTS**|*true* to use local picoTTS or *false* to use VoiceRSS|
+||**weatherUrl**| Replace #your city name# by the name of you city see [www.prevision-meteo.ch](https://www.prevision-meteo.ch)|
+||**jeedomUrl**| Replace #your jeedom IP#, #your Jeedom API key#, #your interaction query# (this last one is the interaction "Demande" field you've defined in jeedom (suggested one = tts)|
+|**cron**|**path**|do not change unless you kno what you're doing|
+|**station**|**path**|do not change unless you kno what you're doing|
+||**local**|path of the file that will be played when no internet is available when Radio is turned on|
+||**default**|url of the default radio stream when you have no favorite in station.txt file, or when the file is corrupted after an upload|
+||**snooze**|define you own snooze time|
 
