@@ -44,6 +44,7 @@ $config = [
 ];
 ````
 
+
 |field|field|Description|
 |--|--|--|
 |**layout_title**|**title**| The name that will appear in the apps header|
@@ -57,4 +58,11 @@ $config = [
 ||**local**|path of the local file that will be played when no internet is available when Radio is turned on - The one provided with this project is a nice country farmhouse bell|
 ||**default**|url of the default radio stream when you have no favorite in station.txt file, or when the file is corrupted after an upload|
 ||**snooze**|define you own snooze time|
+
+- Where to find internet radio stream urls?
+[http://www.listenlive.eu/](http://www.listenlive.eu/)
+This is for EU stations. it is regularly updated when the urls are changed
+- Where to find nice and fun local music file (if you do not like the country farmhouse bell) ?
+- [https://www.sound-fishing.net/bruitages_sonnerie-sonnette.html](https://www.sound-fishing.net/bruitages_sonnerie-sonnette.html)
+Many file are free, other are available for relative low cost
 
