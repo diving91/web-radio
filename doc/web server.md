@@ -2,7 +2,7 @@
 
 >sudo service nginx start
 
-from here, [http://#your IP#](http://#your IP#) should show a welcome page
+from here, [http://your_ip](http://your_ip) should show a welcome page
 - Create www root structure and configure php FastCGI Process Manager
 >sudo service php7.0-fpm restart
 >sudo mkdir /srv/www
