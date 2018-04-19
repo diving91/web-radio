@@ -6,7 +6,7 @@
 > chmod 664/srv/www/home.fr/public/conf/cron.txt<br>
 - Install the crontab (as such it also will remain after a reboot)
 >sh /srv/www/home.fr/public/conf/cron.sh<br>
-- Define you playlist 
+- Define your playlist 
 > sudo nano /srv/www/home.fr/public/conf/station.txt<br>
 ````
 1 http://stream1.chantefrance.com/stream_chante_france.mp3 #Chante France
@@ -21,7 +21,7 @@ File structure is "favorite \<space> radio_stream_url \<space> #radio_nickname"
 
 favorite = 1 for only one station (the one that will be started when radio is put ON)
 
-Note: with the app, you can change it later at your convenience
+Note: with the  web app, you can change it later at your convenience
 > chmod 664/srv/www/home.fr/public/conf/station.txt<br>
 
 - Define default settings of the application
@@ -46,15 +46,15 @@ $config = [
 
 |field|field|Description|
 |--|--|--|
-|**layout_title**|**/title**| The name that will appear in the apps header|
-|**tts**|**voiceRSSkey**| Replace #your VoiceRSS API key# by you API key|
-||**vol**|Volume for TTS audio - tune it to adapt the volume for your needs|
+|**layout_title**|**title**| The name that will appear in the apps header|
+|**tts**|**voiceRSSkey**| Replace #your VoiceRSS API key# by your API key|
+||**vol**|Volume for TTS audio - Tune it to adapt the volume for your needs|
 ||**localTTS**|*true* to use local picoTTS or *false* to use VoiceRSS|
-||**weatherUrl**| Replace #your city name# by the name of you city see [www.prevision-meteo.ch](https://www.prevision-meteo.ch)|
+||**weatherUrl**| Replace #your city name# by the name of you city - see [www.prevision-meteo.ch](https://www.prevision-meteo.ch)|
 ||**jeedomUrl**| Replace #your jeedom IP#, #your Jeedom API key#, #your interaction query# (this last one is the interaction "Demande" field you've defined in jeedom (suggested one = tts)|
-|**cron**|**path**|do not change unless you kno what you're doing|
-|**station**|**path**|do not change unless you kno what you're doing|
-||**local**|path of the file that will be played when no internet is available when Radio is turned on|
+|**cron**|**path**|do not change unless you know what you're doing|
+|**station**|**path**|do not change unless you know what you're doing|
+||**local**|path of the local file that will be played when no internet is available when Radio is turned on - The one provided with this project is a nice country farmhouse bell|
 ||**default**|url of the default radio stream when you have no favorite in station.txt file, or when the file is corrupted after an upload|
 ||**snooze**|define you own snooze time|
 
