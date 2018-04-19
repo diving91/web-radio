@@ -329,6 +329,10 @@ File example:
 0 http://icepe2.infomaniak.ch/impactfm-128.mp3 #Impact FM
 0 http://radioclassique.ice.infomaniak.ch/radioclassique-high.mp3 #Radio Classique
 ```
+File structure is "favorite \<space> radio_stream_url \<space> #radio_nickname"
+
+favorite = 1 for only one station (the one that will be started when radio is put ON)
+
 HTML Code Example:
 ```html
 	<form id="upform" enctype="multipart/form-data">
