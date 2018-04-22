@@ -447,38 +447,4 @@ class Logic {
 		$x = $x[date('F')][date('j')-1][1].' '.$x[date('F')][date('j')-1][0];
 		return $x;
 	}
-	
-	public function test() {
-	//ok echo self::getTodayEphemeris();
-	
-		// Add all cron time stampe in $t
-		$x = self::getCron();
-		$t = [];
-		foreach ($x['cron'] as $cron) {
-			if ($cron['active']) $t[] = Flight::nextcron()->parse($cron['raw']);
-		}
-		// Add all at events of type A in $t
-		$x = shell_exec('atq');
-		if (count($x) >= 1) {
-			$x = explode("\n",trim($x));
-			foreach ($x as $at) {
-				$at = explode("\t", $at);
-				$at[1] = str_replace(' www-data', '', $at[1]);
-				$d = substr($at[1],0,-1);
-				if (substr($at[1],-1) == 'A') { // type audio on
-					$t[] = strtotime($d);
-				}
-			}
-		}
-		if (count($t) >=1) {
-			$t = min($t);
-			if (date('Ymd') == date('Ymd', $t) ) { // next cron is today
-				$str = date("H:i",$t);
-			}
-			else $str = "--:--";
-		}
-		else $str = "--:--";
-	
-	$x = file_get_contents("http://192.168.1.108/core/api/jeeApi.php?plugin=virtual&apikey=SjeKCufMQBRm4bcvK1hkgHYaOCvSxe9q&type=virtual&id=905&value=$str");
-	}
 }
