@@ -2,7 +2,7 @@
 	// Calendar event class.  Supports all types of schedules using a cron-like format.
 	// (C) 2018 CubicleSoft.  All Rights Reserved.
 	
-	// Strpped down from https://github.com/cubiclesoft/php-misc/blob/master/support/calendar_event.php
+	// Stripped down from https://github.com/cubiclesoft/php-misc/blob/master/support/calendar_event.php
 
 	class Crontab
 	{
