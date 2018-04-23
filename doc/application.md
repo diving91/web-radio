@@ -7,7 +7,7 @@
 - Install the crontab (as such it also will remain after a reboot)
 >sh /srv/www/home.fr/public/conf/cron.sh<br>
 - Define your playlist 
-> sudo nano /srv/www/home.fr/public/conf/station.txt<br>
+> sudo nano /srv/www/home.fr/public/station/station.txt<br>
 ````
 1 http://stream1.chantefrance.com/stream_chante_france.mp3 #Chante France
 0 http://cdn.nrjaudio.fm/audio1/fr/30001/mp3_128.mp3?origine=fluxradios #NRJ
@@ -22,7 +22,7 @@ File structure is "favorite \<space> radio_stream_url \<space> #radio_nickname"
 favorite = 1 for only one station (the one that will be started when radio is put ON)
 
 Note: with the  web app, you can change it later at your convenience
-> chmod 664/srv/www/home.fr/public/conf/station.txt<br>
+> chmod 664/srv/www/home.fr/public/station/station.txt<br>
 
 - Define default settings of the application
 > sudo nano /srv/www/home.fr/public/conf/config.php
