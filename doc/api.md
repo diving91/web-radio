@@ -19,6 +19,7 @@
 	+ **/delcron/@id**
 	+ **/stacron/@id/@state**
 	+ **/nextcron**
+	+ **/todayOn** (recurring or non recurring)
 - [Manage alarm clock scheduler (non recurring)](https://github.com/diving91/web-radio/blob/master/doc/api.md#manage-alarm-clock-scheduler-non-recurring)
 	+ **/getat**
 	+ **/addat**
@@ -240,6 +241,20 @@ Recurring alarm clock events are triggered at a defined time on specified days e
 |Success|{"Status":"OK","Time":"Mardi 17\/04\/2018 06:30"}|
 |Error|{“Status”:“KO”,“Time”:“Not Found”}|
 |Note|Return an error state when all alarm clock events are deactivated, or no alarm clock is defined|
+
+##
+
+|Description|Return the NEXT Radio ON trigger for today|
+|--|--|
+|**URL**|**/todayOn**|
+|Method|GET |
+|URL params|none|
+|Success|{"Time":"HH:MM"}|
+||{"Time":"--:--"}|
+|Error|none|
+|Note|Returns "--:--" when no more Radion ON trigger exists for today|
+||The trigger can be a recurring alarm clock event or a non recurring event (see below)|
+||Typical use for a home automation system: refresh a widget every days at 00:00 with alarm event time of the day|
 
 ## Manage alarm clock scheduler (non recurring)
 Non recurring alarm clock events are triggered only once at a defined date and time
