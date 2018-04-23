@@ -252,7 +252,7 @@ Recurring alarm clock events are triggered at a defined time on specified days e
 |Success|{"Time":"HH:MM"}|
 ||{"Time":"--:--"}|
 |Error|none|
-|Note|Returns "--:--" when no more Radion ON trigger exists for today|
+|Note|Returns "--:--" when no more Radio ON trigger exist for today|
 ||The trigger can be a recurring alarm clock event or a non recurring event (see below)|
 ||Typical use for a home automation system: refresh a widget every days at 00:00 with alarm event time of the day|
 
