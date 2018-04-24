@@ -30,6 +30,7 @@ Flight::route('GET /addat', ['logic' , 'addAt']);
 Flight::route('GET /delat/@id:[1-9][0-9]*', ['logic' , 'delAt']);
 
 Flight::route('GET /todayOn', ['logic' , 'todayOn']);
+Flight::route('GET /holiday', ['logic' , 'holiday']);
 
 Flight::route('GET /getstation', ['logic' , 'getStation']);
 Flight::route('GET /selstation/@id:[0-9][0-9]*', ['logic' , 'selectStation']);
