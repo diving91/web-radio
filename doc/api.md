@@ -299,6 +299,18 @@ Miscellaneous calls
 ||The trigger can be a recurring alarm clock event or a non recurring event (see below)|
 ||Typical use for a home automation system: refresh a widget every days at 00:00 with alarm event time of the day|
 
+##
+
+|Description|Disable all recurring alarm events and delete all non-recurring ones|
+|--|--|
+|**URL**|**/holiday**|
+|Method|GET |
+|URL params|none|
+|Success|{'Status':'OK'}|
+|Error|{'Status':'KO','Cron':'Not Found'}|
+|Note|Use this call to mute the audio satellite during an holiday period|
+||While it only disables recurring alarms, take care that it **deletes** the non-recurring ones|
+||When returning from holidays, use **/stacron/@id/@state** and **/addat** API calls to restart the alarm events|
 
 ## Manage Web Radio Playlist 
 
