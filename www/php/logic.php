@@ -121,8 +121,8 @@ class Logic {
 			foreach ($lines as $line) {
 				if ($i == $cron) {
 					if ((substr($line,0,1) == '#' && $cronState == 'off') || (substr($line,0,1) != '#' && $cronState == 'on')) {} // do nothing, cron line is OK
-					elseif ((substr($line,0,1) == '#' && $cronState == 'on')) $x .=substr($line,1).PHP_EOL; // comment cron line
-					elseif ((substr($line,0,1) != '#' && $cronState == 'off')) $x .= '#'.$line.PHP_EOL; //uncomment cron line
+					elseif ((substr($line,0,1) == '#' && $cronState == 'on')) $x .=substr($line,1).PHP_EOL; // uncomment cron line
+					elseif ((substr($line,0,1) != '#' && $cronState == 'off')) $x .= '#'.$line.PHP_EOL; //comment cron line
 				}
 				else $x .=$line.PHP_EOL;
 				$i++;
@@ -187,6 +187,73 @@ class Logic {
 			case 'tts': exec('at '.$date.' -q C -f /srv/www/home.fr/public/conf/attts.txt'); break;
 		}
 		Flight::json(array('Status' => 'OK','At' => $date, 'Type' => $at['t']));
+	}
+
+	// Return the NEXT Radio ON trigger for today (HH:MM or --:-- if none) - The trigger can be a cron or a 'at' event
+	public function todayOn() {
+		// Add all cron timestamp in $t
+		$x = self::getCron();
+		$t = [];
+		foreach ($x['cron'] as $cron) {
+			if ($cron['active']) $t[] = self::getNextCron($cron['raw']);
+		}
+		// Add all at events of type A in $t
+		$x = shell_exec('atq');
+		if (count($x) >= 1) {
+			$x = explode("\n",trim($x));
+			foreach ($x as $at) {
+				$at = explode("\t", $at);
+				$at[1] = str_replace(' www-data', '', $at[1]);
+				$d = substr($at[1],0,-1);
+				if (substr($at[1],-1) == 'A') { // type audio on
+					$t[] = strtotime($d);
+				}
+			}
+		}
+		if (count($t) >=1) {
+			$t = min($t);
+			if (date('Ymd') == date('Ymd', $t)) { // next cron is today
+				$str = date("H:i",$t);
+			}
+			else $str = "--:--";
+		}
+		else $str = "--:--";
+		Flight::json(array('Time' => $str));
+	}
+
+	// Holiday mode - disable all "cron" and delete all "At"
+	public function holiday() {
+		// Disable cron
+		$output = shell_exec('crontab -l');
+		$lines = explode("\n", trim($output));
+		if (count($lines) > 3) {
+			$x='';
+			while ($lines[0] != "#BEGIN") {
+				$x .=$lines[0].PHP_EOL; //copy first header lines of cron file
+				array_shift($lines);
+			}
+			$x .=$lines[0].PHP_EOL; //copy first header lines of cron file
+			array_shift($lines);
+			foreach ($lines as $line) {
+				if (substr($line,0,1) != '#') $x .= '#'.$line.PHP_EOL; //comment cron line
+				else $x .= $line.PHP_EOL;
+			}
+			file_put_contents(Flight::get("pathCron"), $x);
+			exec("cat ".Flight::get("pathCron")." | crontab -");
+			$ret = array('Status' => 'OK');
+
+		}
+		else  { $ret = array('Status' => 'KO','Cron' => 'Not Found'); }
+		// del all "At"
+		$x = shell_exec('atq');
+		if (count($x) >= 1) {
+			$x = explode("\n",trim($x));
+			foreach ($x as $at) {
+				$at = explode("\t", $at);
+				passthru('atrm '.$at[0],$x1);
+			}
+		}
+		Flight::json($ret);
 	}
 
 	// List stations in playlist
@@ -446,5 +513,5 @@ class Logic {
 		$x = json_decode($x,true);
 		$x = $x[date('F')][date('j')-1][1].' '.$x[date('F')][date('j')-1][0];
 		return $x;
-	}
+	}	
 }
