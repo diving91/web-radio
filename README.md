@@ -40,7 +40,7 @@ Main features of this project are:
 - [Application & API setup](https://github.com/diving91/web-radio/blob/master/doc/application.md)
 - [Home automation examples with Jeedom](https://github.com/diving91/web-radio/blob/master/doc/jeedom.md) - work in progress
 
-### Your're Done ! :-)
+### You're Done ! :-)
 
 you can contact me here: 
 User:diving91 https://www.jeedom.fr/forum/
