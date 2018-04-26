@@ -40,8 +40,8 @@ $config = [
 	"station" => [ "path" => '/srv/www/home.fr/public/station/station.txt',
 			"local" => '/srv/www/home.fr/public/conf/clocher-x12-SF.mp3',
 			"default" => 'http://stream1.chantefrance.com/stream_chante_france.mp3'],
-			"snooze" => [ "delay" => '+5 minutes'],
-			"jeedom" => [	"scenario"	=> 'http://#your jeedom IP#/core/api/jeeApi.php?apikey=#your Jeedom API key#&type=scenario&id="ID of scenario to call#&action=start']
+	"snooze" => [ "delay" => '+5 minutes'],
+	"jeedom" => [ "scenario"=> 'http://#your jeedom IP#/core/api/jeeApi.php?apikey=#your Jeedom API key#&type=scenario&id="ID of scenario to call#&action=start']
 ];
 ````
 <br>
