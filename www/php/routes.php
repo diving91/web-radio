@@ -9,7 +9,7 @@ Flight::route('GET /setvol/@id',function($id){
 	Flight::json(array('Status' => 'KO', 'Volume' => 'Out of Range'));
 });
 
-Flight::route('GET /radion', ['logic' , 'startRadio']);
+Flight::route('GET /radion(/@trig:trig)', ['logic' , 'startRadio']);
 Flight::route('GET /radioff', ['logic' , 'stopRadio']);
 Flight::route('GET /snooze', ['logic' , 'snooze']);
 Flight::route('GET /radiostate', ['logic' , 'statusRadio']);
@@ -29,7 +29,7 @@ Flight::route('GET /getat', ['logic' , 'getAt']);
 Flight::route('GET /addat', ['logic' , 'addAt']);
 Flight::route('GET /delat/@id:[1-9][0-9]*', ['logic' , 'delAt']);
 
-Flight::route('GET /todayOn', ['logic' , 'todayOn']);
+Flight::route('GET /todayon', ['logic' , 'todayOn']);
 Flight::route('GET /holiday', ['logic' , 'holiday']);
 
 Flight::route('GET /getstation', ['logic' , 'getStation']);
