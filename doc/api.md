@@ -66,15 +66,19 @@
 
 |Description|Turn Web Radio ON|
 |--|--|
-|**URL**|**/radion**|
+|**URL**|**/radion(/@trig:trig)**|
 |Method|GET |
 |URL params|none|
 |Success|{"Status":"OK","Radio":"Running","path":"http:\/\/stream_url.mp3"}|
 ||{"Status":"OK","Radio":"Was already Running"}|
 |Error|none|
+|Example|/radion|
+||/radion/trig|
 |Note|Stream the Selected Radio in Playlist|
 ||If no playlist, stream default Radio (server side configured)|
 ||If radio stream is not reachable, plays a local file (server side configured)|
+||**/radion/trig** is used to fire a Jeedom callback (see [Application & API setup](https://github.com/diving91/web-radio/blob/master/doc/application.md) documentation)|
+||This API call is typically used when an alarm event is fired as such jeedom can add additional automation actions|
 
 ##
 
