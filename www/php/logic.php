@@ -343,7 +343,7 @@ class Logic {
 				$station = Flight::get("localStation"); // default to local mp3
 			}
 			exec("screen -dmS audiorun /usr/bin/mpg123 -q --loop -1 $station");
-			if ($trig == 'trig') { $x = file_get_contents(Flight::get("callbackJeedom")); } // Callback Jeedom
+			if ($trig == 'trig' && Flight::get("callbackJeedomActive")) { $x = file_get_contents(Flight::get("callbackJeedom")); } // Callback Jeedom
 			if (debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS,2)[1]['function'] == 'invokeMethod') Flight::json(array('Status' => 'OK', 'Radio' => 'Running', "path" => $station));
 		}
 		else {
