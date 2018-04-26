@@ -4,7 +4,7 @@
 	+ **/setvol/@id**
 	+ **/getvol**
 - [Manage Web Radio](https://github.com/diving91/web-radio/blob/master/doc/api.md#manage-web-radio)
-	+ **/radion**
+	+ **/radion(/@trig:trig)**
 	+ **/radioff**
 	+ **/snooze**
 	+ **/radiostate**
