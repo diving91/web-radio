@@ -42,7 +42,7 @@ $config = [
 			"default" => 'http://stream1.chantefrance.com/stream_chante_france.mp3'],
 	"snooze" => [ "delay" => '+5 minutes'],
 	"jeedom" => [ "scenario"=> 'http://#your jeedom IP#/core/api/jeeApi.php?apikey=#your Jeedom API key#&type=scenario&id="#Scenario ID#&action=start'],
-		"active" => false]
+			"active" => false]
 ];
 ````
 <br>
