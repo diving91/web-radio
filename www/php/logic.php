@@ -218,6 +218,7 @@ class Logic {
 			else $str = "--:--";
 		}
 		else $str = "--:--";
+		$str = "10:00";
 		Flight::json(array('Time' => $str));
 	}
 
@@ -333,7 +334,7 @@ class Logic {
 	}
 
 	// Start Radio
-	public function startRadio() {
+	public function startRadio($trig) {
 		if (!self::isAudioRunning()) {	// Radio is not running, we can start it
 			$station = self::whichStation();  // selected radio in playlist or default radio if no playlist
 			$ok = self::checkRadioIsReachable($station); // check radio is reachable
@@ -342,6 +343,7 @@ class Logic {
 				$station = Flight::get("localStation"); // default to local mp3
 			}
 			exec("screen -dmS audiorun /usr/bin/mpg123 -q --loop -1 $station");
+			if ($trig == 'trig') { $x = file_get_contents(Flight::get("callbackJeedom")); } // Callback Jeedom
 			if (debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS,2)[1]['function'] == 'invokeMethod') Flight::json(array('Status' => 'OK', 'Radio' => 'Running', "path" => $station));
 		}
 		else {
@@ -426,7 +428,7 @@ class Logic {
 		else Flight::json(array('Status' => 'TTS: '.$voice['error']));
 	}
 	
-	// Return if Radio is running or Stopped
+	// Return if Radio (or TTS) is running or Stopped
 	private function isAudioRunning() {
 		$x = shell_exec("screen -ls");
 		if (strpos($x, 'audiorun') == false) return false;
@@ -513,5 +515,5 @@ class Logic {
 		$x = json_decode($x,true);
 		$x = $x[date('F')][date('j')-1][1].' '.$x[date('F')][date('j')-1][0];
 		return $x;
-	}	
+	}
 }
