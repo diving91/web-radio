@@ -41,7 +41,7 @@ $config = [
 			"local" => '/srv/www/home.fr/public/conf/clocher-x12-SF.mp3',
 			"default" => 'http://stream1.chantefrance.com/stream_chante_france.mp3'],
 	"snooze" => [ "delay" => '+5 minutes'],
-	"jeedom" => [ "scenario"=> 'http://#your jeedom IP#/core/api/jeeApi.php?apikey=#your Jeedom API key#&type=scenario&id="ID of scenario to call#&action=start']
+	"jeedom" => [ "scenario"=> 'http://#your jeedom IP#/core/api/jeeApi.php?apikey=#your Jeedom API key#&type=scenario&id="#Scenario ID#&action=start']
 ];
 ````
 <br>
@@ -59,6 +59,8 @@ $config = [
 ||**local**|path of the local file that will be played when no internet is available when Radio is turned on - The one provided with this project is a nice country farmhouse bell|
 ||**default**|url of the default radio stream when you have no favorite in station.txt file, or when the file is corrupted after an upload|
 ||**snooze**|define you own snooze time|
+|**jeedom**|**scenario**|Replace #your jeedom IP#, #your Jeedom API key#, #Scenario ID#. This last one is the Jeedom' scenario ID to call at each alarm event (recurring or not). It is activated when active is set to true (see below)|
+||**active**|_true_\|_false_ to activate jeedom callback at each alarm event.|
 
 - Where to find internet radio stream urls?
 
