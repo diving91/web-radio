@@ -17,6 +17,7 @@ Flight::set("ttsLocal", $config['tts']['localTTS']);
 Flight::set("ttsWeather", $config['tts']['weatherUrl']);
 Flight::set("ttsJeedom", $config['tts']['jeedomUrl']);
 Flight::set("callbackJeedom", $config['jeedom']['scenario']);
+Flight::set("callbackJeedomActive", $config['jeedom']['active']);
 
 Flight::set("pathCron", $config['cron']['path']);
 
