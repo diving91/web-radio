@@ -218,7 +218,6 @@ class Logic {
 			else $str = "--:--";
 		}
 		else $str = "--:--";
-		$str = "10:00";
 		Flight::json(array('Time' => $str));
 	}
 
