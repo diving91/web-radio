@@ -333,7 +333,7 @@ class Logic {
 	}
 
 	// Start Radio
-	public function startRadio($trig) {
+	public function startRadio($trig = '') {
 		if (!self::isAudioRunning()) {	// Radio is not running, we can start it
 			$station = self::whichStation();  // selected radio in playlist or default radio if no playlist
 			$ok = self::checkRadioIsReachable($station); // check radio is reachable
