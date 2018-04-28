@@ -1,5 +1,11 @@
 ## Home automation examples with Jeedom
 
+### Create with plugin "script" an equipment to control the audio satellite
+ - Name = audio1
+ - Select the parent object (here the room where the equipment is)
+![script1](https://github.com/diving91/web-radio/blob/master/jeedom/script%201.png)
+
+ 
 ![x](https://github.com/diving91/web-radio/blob/master/jeedom/interact%201.png)
 ![x](https://github.com/diving91/web-radio/blob/master/jeedom/mode%201.png)
 ![x](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20cron%201.png)
@@ -8,7 +14,7 @@
 ![x](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20onoff%202.png)
 ![x](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20telco%201.png)
 ![x](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20telco%202.png)
-![x](https://github.com/diving91/web-radio/blob/master/jeedom/script%201.png)
+
 ![x](https://github.com/diving91/web-radio/blob/master/jeedom/script%202.png)
 ![x](https://github.com/diving91/web-radio/blob/master/jeedom/script%203.png)
 ![x](https://github.com/diving91/web-radio/blob/master/jeedom/telco%201.png)
