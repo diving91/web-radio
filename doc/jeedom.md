@@ -31,7 +31,7 @@ You now have this widget on our dashboard
 ![widget](https://github.com/diving91/web-radio/blob/master/jeedom/widget%201.png)
 
 
-### Define the interaction answer called by /jeedom
+### Define the interaction answer called by the /jeedom API call
 - Give it a name
 - In the "Demande" field, specify the same name as what you've defined in the audio satellite config file for **tts/jeedomUrl** (see: [Application & API setup](https://github.com/diving91/web-radio/blob/master/doc/application.md))
 ![Interaction](https://github.com/diving91/web-radio/blob/master/jeedom/interact%201.png)
