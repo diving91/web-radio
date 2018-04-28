@@ -43,7 +43,7 @@ You now have this widget on your dashboard
 
 ### Add physical buttons to the audio satellite
 - In my case I've used a RF433Mhz remote control with 4 buttons which is controlled with the "RFXCOM" plugin and the RFXCOM box
-- I've programmed the 4 buttons as in the image below (see on the forum hor an how to)
+- I've programmed the 4 buttons as in the image below (see on the forum for an how to)
 ![remote](https://github.com/diving91/web-radio/blob/master/jeedom/telco%201.png)
 
 - Create a scenario for the remote control using 4 triggers (one per button)
