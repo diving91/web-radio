@@ -4,9 +4,9 @@ Designed around a Raspberry-PI Zero W and a [HiFiBerry MiniAmp](https://www.hifi
 
 I started this project because my alarm-clock's knobs were difficult to manipulate after years of service. In the same time I was searching for a way to diffuse Text-to-Speech messages from my [Jeedom](http://jeedom.fr) home automation system as well as being able to broadcast internet radio streams.
 
-I decided to combine all needs in an all in one audio satellite with a RESTfull API in order to control it from my home automation system.
+I decided to combine all needs in an all in one audio satellite with a RESTful API in order to control it from my home automation system.
 
-In order to have this audio satellite as autonomous as possible, in addition to the RESTfull API, I've made a web UI that I can run from my mobile phone or any browser.
+In order to have this audio satellite as autonomous as possible, in addition to the RESTful API, I've made a web UI that I can run from my mobile phone or any browser.
 
 Main features of this project are:
 - Web radio with selectable channel from a playlist
@@ -19,7 +19,7 @@ Main features of this project are:
 - Play Text-to-Speech messages delivered by my home automation system
 - Play local Text-to-Speech messages like weather forecast of the day
 - Text-to-speech engine online ([voicerss](http://www.voicerss.org/)) or offline (libttspico-utils)
-- RESTFull API with all functionalities included to control the audio satellite
+- RESTFul API with all functionalities included to control the audio satellite
 - Local web application to control the audio satellite
 - No knobs or display. My old alarm clock still projects time & temperature on the ceilling. For the knobs, I use a 4 buttons 433Mhz remote control that interacts with the audio satellite via Jeedom (or any other home automation system)
 
