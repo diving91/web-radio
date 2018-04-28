@@ -26,7 +26,7 @@
 - For the "On" & "Off" Commands, use the **dashboard.action.other.ToggleSwitchIMG** widget (see Jeedom forum to configure it)
 - Click on "Save"
 
-You now have this widget on our dashboard
+You now have this widget on your dashboard
 
 ![widget](https://github.com/diving91/web-radio/blob/master/jeedom/widget%201.png)
 
