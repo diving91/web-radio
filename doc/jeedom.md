@@ -42,8 +42,14 @@ You now have this widget on our dashboard
 
 ### Add physical buttons to the audio satellite
 - In my case I use a RF433Mhz remote control with 4 buttons which is controlled with the "RFXCOM" plugin and the RFXCOM box
-- I've programmed the 4 buttons as in the image below
+- I've programmed the 4 buttons as in the image below (see on the forum hor an how to)
 ![remote](https://github.com/diving91/web-radio/blob/master/jeedom/telco%201.png)
+- Create a scenario for the remote control using 4 triggers (one per button)
+![scn remote 1](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20telco%201.png)
+- For each trigger, define the relevant action when the button is pressed (condition "equipment==1")
+![scn remote 2](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20telco%202.png)
+
+
 
 
 
@@ -52,8 +58,7 @@ You now have this widget on our dashboard
 ![x](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20cron%202.png)
 ![x](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20onoff%201.png)
 ![x](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20onoff%202.png)
-![x](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20telco%201.png)
-![x](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20telco%202.png)
+
 
 
 
