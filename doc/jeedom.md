@@ -27,6 +27,7 @@
 - Click on "Save"
 
 You now have this widget on our dashboard
+
 ![widget](https://github.com/diving91/web-radio/blob/master/jeedom/widget%201.png)
 
 
