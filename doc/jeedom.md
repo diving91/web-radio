@@ -36,9 +36,14 @@ You now have this widget on our dashboard
 - In the "Demande" field, specify the same name as what you've defined in the audio satellite config file for **tts/jeedomUrl** (see: [Application & API setup](https://github.com/diving91/web-radio/blob/master/doc/application.md))
 ![Interaction](https://github.com/diving91/web-radio/blob/master/jeedom/interact%201.png)
 
+### Use the "Mode" plugin to automatically switch off all alarm events when you leave for holidays
+- Add this entry condition in the Holidays' Mode
+![holidays](https://github.com/diving91/web-radio/blob/master/jeedom/mode%201.png)
 
 
-![x](https://github.com/diving91/web-radio/blob/master/jeedom/mode%201.png)
+
+
+
 ![x](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20cron%201.png)
 ![x](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20cron%202.png)
 ![x](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20onoff%201.png)
