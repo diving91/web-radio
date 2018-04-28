@@ -41,7 +41,7 @@ You now have this widget on our dashboard
 ![holidays](https://github.com/diving91/web-radio/blob/master/jeedom/mode%201.png)
 
 ### Add physical buttons to the audio satellite
-- In my case I use a RF433Mhz remote control with 4 buttons which is controlled with the "RFXCOM" plugin and the RFXCOM box
+- In my case I've used a RF433Mhz remote control with 4 buttons which is controlled with the "RFXCOM" plugin and the RFXCOM box
 - I've programmed the 4 buttons as in the image below (see on the forum hor an how to)
 ![remote](https://github.com/diving91/web-radio/blob/master/jeedom/telco%201.png)
 
@@ -50,15 +50,21 @@ You now have this widget on our dashboard
 - For each trigger, define the relevant action when the button is pressed (condition "equipment==1")
 ![scn remote 2](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20telco%202.png)
 
+### Add a scenario to control the audio satellite ON & OFF
+- Select the command "Mode" from the virtual we've defined above as scenario trigger
+![scn mode](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20onoff%201.png)
+- Add the below test conditions and actions
+![scn mode 1](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20onoff%202.png)
 
-
-
-
-
-![x](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20cron%201.png)
-![x](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20cron%202.png)
-![x](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20onoff%201.png)
-![x](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20onoff%202.png)
+### Add a scenario to define other automation task at each alarm event
+- Define a programmed trigger for this scenario at 00:01
+- At 00:01 every days it will update the alarm time of day on the widget
+- Then the audio satellite itself will call this scenario at each alarm event to display the time of the next alarm clock of the day
+- This scenario allows to trigger other actions (turn on light, etc ...) as you need
+![scn alarm](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20cron%201.png)
+![scn alarm 1](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20cron%202.png)
+- The first "Action" block is used to refresh the widget display to show the next alarm event of the day. Thanks to this, you can have multiple alarms in one day.
+- The next block is fired when the audio satellite calls back the scenario  as defined is the config file **** parameter (see: [Application & API setup](https://github.com/diving91/web-radio/blob/master/doc/application.md))
 
 
 
