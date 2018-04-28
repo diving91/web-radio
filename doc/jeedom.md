@@ -1,5 +1,2 @@
-
-
-
-> Written with [StackEdit](https://stackedit.io/).
+Home automation examples with Jeedom
 
