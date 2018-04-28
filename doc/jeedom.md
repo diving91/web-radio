@@ -40,6 +40,10 @@ You now have this widget on our dashboard
 - Add this entry condition in the Holidays' Mode
 ![holidays](https://github.com/diving91/web-radio/blob/master/jeedom/mode%201.png)
 
+### Add physical buttons to the audio satellite
+- In my case I use a RF433Mhz remote control with 4 buttons which is controlled with the "RFXCOM" plugin and the RFXCOM box
+- I've programmed the 4 buttons as in the image below
+![remote](https://github.com/diving91/web-radio/blob/master/jeedom/telco%201.png)
 
 
 
@@ -50,7 +54,7 @@ You now have this widget on our dashboard
 ![x](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20onoff%202.png)
 ![x](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20telco%201.png)
 ![x](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20telco%202.png)
-![x](https://github.com/diving91/web-radio/blob/master/jeedom/telco%201.png)
+
 
 
 
