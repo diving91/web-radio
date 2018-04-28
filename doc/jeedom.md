@@ -1,5 +1,6 @@
 ## Home automation examples with Jeedom
 
+[french version](https://github.com/diving91/web-radio/blob/master/doc/fr-jeedom.md)
 ### Create with the "script" plugin an equipment to control the audio satellite
  - Define a name for the equipment "audio1"
  - Select the parent object (here the room where the equipment is)
