@@ -70,7 +70,8 @@ You now have this widget on our dashboard
 ### Going further
 You can do much more by using the audio satellite API and more complex scripts or "code" blocks in scenarios. Eg you can link a calendar with the audio satellite to automatically define the alarm events. Or you can remotely manage your favorite web radio, show them on a virtual, etc etc.
 
-For this need need more advanced programming skills - The forum is there to help you.
+For this you need more advanced programming skills - The [forum](https://www.jeedom.fr/forum/) is there to help you.
+Don't hesitate to look at the [API Documentation](https://github.com/diving91/web-radio/blob/master/doc/api.md) to see all possibilities
 
 
 
