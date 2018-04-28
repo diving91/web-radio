@@ -15,6 +15,9 @@
 ![script2](https://github.com/diving91/web-radio/blob/master/jeedom/script%202.png)
 ![script3](https://github.com/diving91/web-radio/blob/master/jeedom/script%203.png)
 
+### Define the interaction answer called by /jeedom
+- give it a name
+- In the "Demande" field, specify the same name as what you've defined in the audio satellite config file (see: 
  
 ![x](https://github.com/diving91/web-radio/blob/master/jeedom/interact%201.png)
 ![x](https://github.com/diving91/web-radio/blob/master/jeedom/mode%201.png)
