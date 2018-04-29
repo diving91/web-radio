@@ -66,7 +66,7 @@ Vous avez maintenant ce widget sur votre tableau de bord
 - Le bloc suivant est déclenché lorsque le satellite audio rappelle le scénario tel que défini par le paramètre du fichier de configuration **jeedom / scenario** (voir: [Application & API setup](https://github.com/diving91/web-radio/blob/master/doc/application.md))
 - Dans l'exemple ci-dessus, j'ai ajouté un message de synthèse vocale 4 minutes après l'événement d'alarme ... pour me rappeler que je dois sortir du lit :-)  
 - Vous pouvez définir n'importe quelle tâche qui répond à vos besoins, comme l'éclairage d'une lampe, l'ouverture des volets ou tout ce qui est contrôlé par Jeedom. **C'est vraiment cool!**
-### Going further
+### Aller plus loin ...
 Vous pouvez faire beaucoup plus en utilisant l'API du satellite audio et des scripts plus complexes ou des blocs "code" dans les scénarios. Par exemple, vous pouvez lier un calendrier avec le satellite audio pour définir automatiquement les événements d'alarme. Ou vous pouvez gérer à distance votre web radio préférée, les montrer sur un virtuel, etc.
 
 Pour cela, vous aurez besoin de compétences de programmation un peu plus avancées - Le [forum](https://www.jeedom.fr/forum/) est là pour vous aider.
