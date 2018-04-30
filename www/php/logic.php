@@ -210,9 +210,11 @@ class Logic {
 				}
 			}
 		}
+		// get timestamp that fits in the next 24h
 		if (count($t) >=1) {
 			$t = min($t);
-			if (date('Ymd') == date('Ymd', $t)) { // next cron is today
+			
+			if (($t > time()) && ($t <= time()+86400)) { // next cron is within the next 24hours
 				$str = date("H:i",$t);
 			}
 			else $str = "--:--";
