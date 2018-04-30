@@ -59,12 +59,12 @@ You now have this widget on your dashboard
 
 ### Add a scenario to define other automation task at each alarm event
 - Define a programmed trigger for this scenario at 00:01
-- At 00:01 every days it will update the alarm time of day on the widget
+- At 00:01 every days it will update the alarm time of today on the widget
 - Then the audio satellite itself will call this scenario at each alarm event to display the time of the next alarm clock of the day
 - This scenario allows to trigger other actions (turn on light, etc ...) as you need
 ![scn alarm](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20cron%201.png)
 ![scn alarm 1](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20cron%202.png)
-- The first "Action" block is used to refresh the widget display to show the next alarm event of the day. Thanks to this, you can have multiple alarms in one day.
+- The first "Action" block is used to refresh the widget display to show the next alarm event that will occur within the next 24hours. Thanks to this, you can have multiple alarms in one day.
 - The next block is fired when the audio satellite calls back the scenario  as defined is the config file **jeedom/scenario** parameter (see: [Application & API setup](https://github.com/diving91/web-radio/blob/master/doc/application.md))
 - In the above example, I've added a Text-to-speech message 4 minutes after the alarm event ... to remind me I need to go out of bed :-)
 - You can define any task that suits your need such as lighting on a lamp, opening the fence, or whatever is controlled by jeedom. **That's really cool stuff !**
