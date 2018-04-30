@@ -291,7 +291,7 @@ Non recurring alarm clock events are triggered only once at a defined date and t
 ## Other
 Miscellaneous calls
 
-|Description|Return the NEXT Radio ON trigger for today|
+|Description|Return the NEXT Radio ON trigger for the next 24hours|
 |--|--|
 |**URL**|**/todayOn**|
 |Method|GET |
@@ -301,7 +301,7 @@ Miscellaneous calls
 |Error|none|
 |Note|Returns "--:--" when no more Radio ON trigger exist for today|
 ||The trigger can be a recurring alarm clock event or a non recurring event (see below)|
-||Typical use for a home automation system: refresh a widget every days at 00:00 with alarm event time of the day|
+||Typical use for a home automation system: refresh a widget every days at 00:00 with the next alarm event within a 24h range|
 
 ##
 
