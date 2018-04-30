@@ -58,11 +58,11 @@ Vous avez maintenant ce widget sur votre tableau de bord
 ### Ajouter un scénario pour définir une autre tâche d'automatisation à chaque événement d'alarme
 - Définir un déclencheur programmé pour ce scénario à 00:01  
 - À 00:01 tous les jours, il mettra à jour l'heure d'alarme du jour sur le widget  
-- Ensuite, le satellite audio appellera lui-même ce scénario à chaque événement d'alarme pour afficher l'heure du réveil suivant de la journée  
+- Ensuite, le satellite audio appellera lui-même ce scénario à chaque événement d'alarme pour afficher l'heure du prochain réveil dans les 24h à venir  
 - Ce scénario permet de déclencher d'autres actions (allumer la lumière, etc ...) selon vos besoins
 ![scn alarm](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20cron%201.png)
 ![scn alarm 1](https://github.com/diving91/web-radio/blob/master/jeedom/scn%20cron%202.png)
-- Le premier bloc "Action" est utilisé pour actualiser l'affichage du widget pour afficher l'événement d'alarme suivant de la journée. Grâce à cela, vous pouvez avoir plusieurs alarmes sur une même journée.
+- Le premier bloc "Action" est utilisé pour actualiser l'affichage du widget pour afficher l'événement d'alarme dans les prochaines 24h. Grâce à cela, vous pouvez avoir plusieurs alarmes sur une même journée.
 - Le bloc suivant est déclenché lorsque le satellite audio rappelle le scénario tel que défini par le paramètre du fichier de configuration **jeedom / scenario** (voir: [Application & API setup](https://github.com/diving91/web-radio/blob/master/doc/application.md))
 - Dans l'exemple ci-dessus, j'ai ajouté un message de synthèse vocale 4 minutes après l'événement d'alarme ... pour me rappeler que je dois sortir du lit :-)  
 - Vous pouvez définir n'importe quelle tâche qui répond à vos besoins, comme l'éclairage d'une lampe, l'ouverture des volets ou tout ce qui est contrôlé par Jeedom. **C'est vraiment cool!**
