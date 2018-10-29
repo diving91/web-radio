@@ -33,7 +33,7 @@ server {
 		include /etc/nginx/fastcgi_params;
 		fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
 		fastcgi_index index.php;
-		fastcgi_param SCRIPT_FILENAME /srv/www/home/public$fastcgi_script_name;
+		fastcgi_param SCRIPT_FILENAME /srv/www/home.fr/public$fastcgi_script_name;
 	}
 }
 ````
