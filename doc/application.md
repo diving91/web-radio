@@ -66,7 +66,9 @@ $config = [
 - Where to find internet radio stream urls?
 
 [http://www.listenlive.eu/](http://www.listenlive.eu/)
-This is for EU stations. it is regularly updated when the urls are changed
+This is for EU stations. it is regularly updated when the urls are changed.
+[https://fluxradios.blogspot.com/p/flux-radios-francaise.html](https://fluxradios.blogspot.com/p/flux-radios-francaise.html)
+This is for FR stations.
 - Where to find nice and fun local music file (if you do not like the country farmhouse bell) ?
 
 [https://www.sound-fishing.net/bruitages_sonnerie-sonnette.html](https://www.sound-fishing.net/bruitages_sonnerie-sonnette.html)
